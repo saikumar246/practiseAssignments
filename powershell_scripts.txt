@@ -1,0 +1,2784 @@
+**********************
+Windows PowerShell transcript start
+Start time: 20200728174843
+Username: DHSK\hp
+RunAs User: DHSK\hp
+Configuration Name: 
+Machine: DHSK (Microsoft Windows NT 10.0.18362.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 18296
+PSVersion: 5.1.18362.752
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.18362.752
+BuildVersion: 10.0.18362.752
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\hp\Documents\PowerShell_transcript.DHSK.Jbrohv2P.20200728174843.txt
+PS C:\WINDOWS\system32> n1=1000
+n1=1000 : The term 'n1=1000' is not recognized as the name of a cmdlet, function, script file, or operable program. 
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ n1=1000
++ ~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (n1=1000:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+n1=1000 : The term 'n1=1000' is not recognized as the name of a cmdlet, function, script file, or operable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ n1=1000
++ ~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (n1=1000:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\WINDOWS\system32> $n1=1000
+PS C:\WINDOWS\system32> $n2=22000
+PS C:\WINDOWS\system32> $result=$n1+$n2
+PS C:\WINDOWS\system32> $result
+23000
+PS C:\WINDOWS\system32> [int]"0x$result"
+143360
+PS C:\WINDOWS\system32> $result
+23000
+PS C:\WINDOWS\system32> 0x$result
+0x$result : The term '0x$result' is not recognized as the name of a cmdlet, function, script file, or operable program. 
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ 0x$result
++ ~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (0x$result:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+0x$result : The term '0x$result' is not recognized as the name of a cmdlet, function, script file, or operable
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ 0x$result
++ ~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (0x$result:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\WINDOWS\system32> $hex="faa11"
+PS C:\WINDOWS\system32> $hex
+faa11
+PS C:\WINDOWS\system32> [int]"0x$hex"
+1026577
+PS C:\WINDOWS\system32> $usr="sai"
+PS C:\WINDOWS\system32> $pwd="sai123"
+PS C:\WINDOWS\system32> if($pwd -eq "sai123"){'sai is logged In'}else{'sai cannot login, password is incorrect'}
+sai is logged In
+PS C:\WINDOWS\system32> $pwd="sai246"
+PS C:\WINDOWS\system32> if($pwd -eq "sai123"){'sai is logged In'}else{'sai cannot login, password is incorrect'}
+sai cannot login, password is incorrect
+PS C:\WINDOWS\system32> get-date
+
+28 July 2020 18:00:38
+
+
+PS C:\WINDOWS\system32> $date=(get-date).ToString("ddmmyyyy")
+PS C:\WINDOWS\system32> $date
+28012020
+PS C:\WINDOWS\system32> $date=(get-date).ToString("dd/mm/yyyy")
+PS C:\WINDOWS\system32> $date
+28-02-2020
+PS C:\WINDOWS\system32> $usr.gettype()
+
+IsPublic IsSerial Name                                     BaseType
+-------- -------- ----                                     --------
+True     True     String                                   System.Object
+
+
+PS C:\WINDOWS\system32> get-process
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+    412      23     4396      19228       1.23  16360   6 AdobeARM
+    232      13     2512       8592       0.30   3120   6 AdobeIPCBroker
+    334      20     8220      25952       0.63      8   6 ApplicationFrameHost
+    154       9     1416       1328       0.16   4064   0 armsvc
+    406      17    25208      30004   1,648.09  11472   0 audiodg
+    536      25     7620      27924       0.25   6580   6 backgroundTaskHost
+     61       5      724       2308       0.02  18540   6 CCXProcess
+    377      31    99636     138300      43.13    224   6 chrome
+   2385      78   269056     285308     345.55    392   6 chrome
+    237      16    26004      37676       4.05    916   6 chrome
+    240      18   102628      79264      43.23   2468   6 chrome
+    237      16    24024      31988       0.61   2748   6 chrome
+    756      38   270060     240504     301.77   2764   6 chrome
+    220      14    11796      21244       0.28   2844   6 chrome
+    303      23    82412      67924      27.88   5468   6 chrome
+    234      17    27480      31400       0.38   7780   6 chrome
+    310      26   129864     184552      45.95   8888   6 chrome
+    314      23   108732      64684      12.17   9552   6 chrome
+    509      31    37340      49640     139.14   9980   6 chrome
+    321      21    61132      76864       2.73  10592   6 chrome
+    234      17    28672      30328       0.41  10828   6 chrome
+    281      26   125520     120216      45.28  10904   6 chrome
+    239      18   156888     171356      63.72  11044   6 chrome
+    782      44   288336     185088     225.86  15728   6 chrome
+    277      17     6628      15144       5.78  15856   6 chrome
+    249      15    19248      31228       1.16  16300   6 chrome
+    341      30   182108     162932      63.67  16476   6 chrome
+    240      16    24920      43804       4.14  16676   6 chrome
+    285      20    63464      98440      11.27  17396   6 chrome
+    247      18    33544      33716       0.44  17412   6 chrome
+    296      22   111420      54284      13.48  17820   6 chrome
+    313      28   174264     146620      52.56  18844   6 chrome
+    295       8     1728       5932       0.17  19532   6 chrome
+    396      35   219012     206852      78.11  19948   6 chrome
+    253      18    38776      38660       1.58  20628   6 chrome
+    426      29   148856     147780      25.89  21472   6 chrome
+    167       8     1756       7996       0.13  11012   6 CompPkgSrv
+    118       7     6428       1896       0.03   3808   0 conhost
+    121       8     6500      10636       0.02   4100   6 conhost
+    156      10     6704       2264      14.47   5180   0 conhost
+    122       8     6504       4848       0.05  11996   6 conhost
+    261      14     4200      15568       0.69  18344   6 conhost
+    120       8     6492       4924       0.33  19836   6 conhost
+    202      14     2312        256       0.25    568   6 CoolSense
+    979      31     2804       3000      22.81    668   0 csrss
+    842      25     2440       5568     128.27  10712   6 csrss
+    446      16     4592      17528      34.86  11284   6 ctfmon
+    565      36    32084      30212       0.45  11896   6 CtxWebBrowser
+    425      30    16976      22528       5.13  15392   6 CtxWebBrowser
+    139       6     1240        968       0.08   4900   0 dasHost
+    203      17     3384       5152       0.17   7392   0 dllhost
+    244      17     4176      11844       0.69  15772   6 dllhost
+    223      14     2148        224       0.58  17944   0 DropboxUpdate
+    853      34    45284      55304     899.30  16032   6 dwm
+    537      29    29192      12256     102.28   4804   0 emagent
+     81       6     1344       3700       1.56   1400   6 esif_assist_64
+    132       8     2268       2848       3.77   4328   0 esif_uf
+    364      18     5556       7776       3.95   1756   0 EvtEng
+   3067     106    99580     171428     303.41  20712   6 explorer
+     32       5     1568       1056       0.08    764   0 fontdrvhost
+     32       7     2356       4560       2.00   7488   6 fontdrvhost
+     41       3      548       1836      13.30  15472   6 fsnotifier64
+   1024      47    34516      84720      19.75   6100   6 GitHubDesktop
+    520      27    87336     101064      25.13  14416   6 GitHubDesktop
+    433      37    73296     102072      26.42  16884   6 GitHubDesktop
+    181      11     1740        584       0.23  10168   0 GoogleCrashHandler
+    160       9     1732        300       0.19  10440   0 GoogleCrashHandler64
+    632      39    38508       4676       3.48  17180   6 HPAudioSwitch
+    441      17    14644       7860       3.33   9776   0 HPCommRecovery
+    524      42    14376       6676       3.94  10176   0 HPJumpStartBridge
+    187      12     3960        376       0.11  16600   6 HPJumpStartLaunch
+    237      13     2168       9200      17.95   5876   6 HPMSGSVC
+    363      19     5660       7656       8.06   5188   0 HPOrbitService
+    308      13     2128       5056       0.38  14664   0 hpqwmiex
+    643      24    45272      31332       4.34   6584   0 HPSupportSolutionsFrameworkService
+    199      12     1796       8268       0.11   1904   0 HPWMISVC
+    456      42    41012      13848      10.92   9608   0 IAStorDataMgrSvc
+     88       6     1192       1920       0.22   4320   0 ibtsiva
+      0       0       60          8                 0   0 Idle
+    176      10     1940       3316       0.19   2260   0 igfxCUIService
+    218      14     3664      12020       0.45  20876   6 igfxEM
+    170       9     1692       2152       0.08   4080   0 IntelCpHDCPSvc
+    271      16     3924       3280       0.56   5280   0 IntelCpHeciSvc
+    157      10     1368       1060       0.16  11364   0 jhi_service
+    520      26    12244      47584       1.19  17264   6 LockApp
+   1828      26     9676      16096     106.36    864   0 lsass
+    182      14     2628       4036      45.58   4088   0 mDNSResponder
+      0       0     2424     970844     111.91   2108   0 Memory Compression
+    868      58   103264        560       5.59  13972   6 Microsoft.Photos
+    173      12     1756       7252       0.19   6724   6 MiPhoneHelper
+   9401      96  2032948     482572   4,434.53   4312   0 MsMpEng
+  42726      11    91328       2520       5.66   4112   0 mysqld
+    640      25   450972      21804      40.72   9912   6 mysqld
+    137       9     7528       6844       0.05  11648   6 mysqld
+    192      11     4956       4696       9.23   4500   0 NisSrv
+    716      42    35372      40192       7.86  19592   6 node
+    293      16     3572       7236       2.41   1808   0 NVDisplay.Container
+    533      25    24932      24888       4.11  12948   6 NVDisplay.Container
+    776      28    31648      29748      11.83   3180   0 OfficeClickToRun
+    242      25     9936       1972       0.19   4136   0 omtsreco
+    758      58  3715660     232280     480.14   4176   0 oracle
+    210      19    60212       1848       0.28   6796   0 oracle
+    226      18     5396       2884       0.16   6760   0 oravssw
+    741      31    69064      82964       1.91  18296   6 powershell
+    231      27    24504       2260       0.45   1496   0 PresentationFontCache
+    913      58   912856     867488     670.59  18708   6 pycharm64
+    316      16     6236      13380       0.16   9504   6 RAVBg64
+    503      37     8216      19272     134.73  19124   6 Receiver
+    345      13     1960       7988       1.19  11568   6 redirector
+      0      17    12956      75068       7.63     96   0 Registry
+    185      11     2240       3888       0.20   4208   0 RegSrvc
+    327      20     7832      20104       0.56   8144   6 RemindersServer
+    150       8     1552       1892       0.17   9300   0 RichVideo64
+    226      11     2448       4548       0.81   2544   0 RtkAudioService64
+    577      16    11432      14936       1.06  20304   6 RtkNGUI64
+    130      10     2472       8104       0.03  16084   6 rundll32
+    428      19     4700      19632       1.09  10016   6 RuntimeBroker
+    912      42    20188      56204      39.78  11144   6 RuntimeBroker
+    418      23     7848      26740      16.27  13704   6 RuntimeBroker
+    436      24    10904      30016       1.88  13764   6 RuntimeBroker
+    367      20     6440      23428       1.97  14260   6 RuntimeBroker
+    393      22     8988      28624       3.94  15508   6 RuntimeBroker
+    342      17     4132      19904       0.98  18536   6 RuntimeBroker
+    466      33    79044      63284     103.84  17032   6 SAntivirusClient
+   1656      25     9676      11884   4,366.89   4216   0 SAntivirusIC
+    888      66    89888      61928   1,773.52  13672   0 SAntivirusService
+    135       8     1460       6400       0.02   1572   0 SearchFilterHost
+    908      81    50892      56332     130.03   7908   0 SearchIndexer
+    378      13     2580      11996       0.08  22004   0 SearchProtocolHost
+   1756     111   135336     216532      13.52  17044   6 SearchUI
+    618      19     5616      11160       5.73  12300   0 SecurityHealthService
+    161      10     1824       8004       0.06   9432   6 SecurityHealthSystray
+    774      54    37096      45832       6.14  10396   6 SelfService
+    399      27    16312      23860       1.73  12588   6 SelfServicePlugin
+    905      12     8284       7948  22,777.09    840   0 services
+    713      46    15160      28644      45.06  11460   6 SettingSyncHost
+     89       7     4656       4576       3.80  12600   0 SgrmBroker
+    650      27    16780      49916       2.70  15324   6 ShellExperienceHost
+    651      21     8164      26668      15.75  14200   6 sihost
+    259      18     9368      12048       0.09   4232   6 Skype
+    336      21    10052      16072       0.50  13880   6 Skype
+    863      50    40412      62820      66.91  15012   6 Skype
+    512      31    12996      22948      22.28  15476   6 Skype
+    528      33    39592      32052       8.59  19704   6 Skype
+   1296      91   193548     118748      29.86  21176   6 Skype
+    369      22     7516      21096       0.14  22308   6 smartscreen
+     53       3     1184        588       0.31    444   0 smss
+    769      32    18756      32932      88.34   1940   6 SpeechRuntime
+    449      21     5844       5344       0.88   3712   0 spoolsv
+    141      10     1836       2504       0.08   4236   0 sqlwriter
+    700      34    30820      78848       6.61  11200   6 StartMenuExperienceHost
+    230      12     2804       4548     318.78     68   0 svchost
+    109       8     1500       1580      83.52    492   0 svchost
+    502      28     7888      21452     272.86    580   6 svchost
+   1498      26    19032      28016     565.48    588   0 svchost
+   1652      22    11968      14732     656.61   1136   0 svchost
+    431      13     4300       7096     206.66   1184   0 svchost
+    174      10     1968       3720     140.72   1240   0 svchost
+    325      15     5748      14172     269.88   1300   0 svchost
+    300      12     3056       5680     293.81   1368   0 svchost
+    282      15     3152       6860     174.25   1448   0 svchost
+    183      11     2872       5528     280.09   1468   0 svchost
+    249      14     3316       6268     221.33   1492   0 svchost
+    183       8     2328       2576     200.70   1516   0 svchost
+    266      16   148776     145700   3,120.84   1548   0 svchost
+    269      11     2584       5028     121.09   1612   0 svchost
+    229      11     2772       5044     226.83   1684   0 svchost
+    276       8     1756       2536     116.30   1704   0 svchost
+    491      22     5512      15432     315.03   1736   0 svchost
+    237      13     4912       7400       3.64   1888   0 svchost
+    247      12     2556       5320     147.64   1916   0 svchost
+    482      15    18312      14876     797.55   1996   0 svchost
+    187      32     7728       8220     222.98   2004   0 svchost
+    209      12     2444       3048     369.25   2056   0 svchost
+    238      15     2620       3748     157.67   2184   0 svchost
+    260      14     2932       6268     191.52   2236   0 svchost
+    145      10     1956       3440     269.02   2312   0 svchost
+    200      11     2180       4388     124.56   2372   0 svchost
+    198      13     2504       6088     256.36   2380   0 svchost
+    456      20     8176      11356     224.83   2456   0 svchost
+    441      15     4416      10216     496.88   2484   0 svchost
+    313      11     8272      13620     181.08   2616   0 svchost
+   1094      27    11380      39796     404.06   2624   6 svchost
+    243      14     3640       8228     206.84   2640   0 svchost
+    403      13     3616       7496     183.05   2984   0 svchost
+    424      18     3892       6452     420.27   3028   0 svchost
+    378      18     5216       6584   1,394.34   3036   0 svchost
+    323      14     4804       5092     489.20   3044   0 svchost
+    164      14     2252       3244     296.34   3052   0 svchost
+    402      31     7312      12440     566.59   3116   0 svchost
+    626      76    20316      25396      30.53   3172   0 svchost
+    466      17     6308       9576     581.86   3336   0 svchost
+    229      11     3112       4244     291.55   3344   0 svchost
+    428      24    49096      52636     987.67   3392   0 svchost
+    210     146     3352       6756     212.52   3412   0 svchost
+    584      20     7704      13008     345.28   3452   0 svchost
+   1495      23     5252       7376     344.53   3588   0 svchost
+    269      16     3828       7412     187.73   3596   0 svchost
+    492      35    13956      16228     678.33   3768   0 svchost
+    246      14     5224       5940     155.25   3780   0 svchost
+    189      13     4604       3920     166.55   4072   0 svchost
+    295      15     3284       3684     172.50   4380   0 svchost
+    326      28     4060       5612     592.42   4388   0 svchost
+    160      10     1668       2568     114.00   4396   0 svchost
+    541      19    11524      17160     400.08   4400   0 svchost
+    148      10     1972       1436     285.13   4412   0 svchost
+    509      23     6548      16596     307.34   4432   0 svchost
+    613      34    11800      20788     257.70   4472   0 svchost
+    223      13     2572       2888     298.06   4736   0 svchost
+    547      19     4756       8968     280.86   4892   0 svchost
+    151      10     2084       2488     231.83   5056   0 svchost
+    280      21     2896       4040     332.56   5540   0 svchost
+    270      16     3184      10900     194.41   5740   0 svchost
+    226      13     2828       4488     194.95   5832   0 svchost
+    430      28     4260       6360     269.70   5852   0 svchost
+    188      13     2364       4568     318.55   6688   0 svchost
+    211      12     2436       8668      80.02   6896   0 svchost
+    389      26    10080      13000     197.72   7304   0 svchost
+    339      13     2896       9608     153.58   7968   0 svchost
+    491      20     9644      28200     192.19   8200   6 svchost
+    220      10     2252       3564     117.89   8400   0 svchost
+    471      22     6104      13756     881.14   8644   0 svchost
+    333      14     5788       7788     133.34   8760   0 svchost
+    195      12     2464       4996     337.59   8784   0 svchost
+    120       8     1656       5040      77.09   8908   0 svchost
+    326      17     4020      21872     121.28   9476   6 svchost
+    177      10     2336       6284     176.19  10284   0 svchost
+    330      18     5376      12164     216.23  10752   0 svchost
+    188      10     2112       7784       0.39  11900   0 svchost
+    319      17     7144      13128     230.13  12284   0 svchost
+    128       9     2400       3440     104.50  13016   0 svchost
+    231      13     2664       4688       0.81  13060   0 svchost
+    395      17     4576      17112       0.66  14252   0 svchost
+    192      10     2180       5380     243.73  15028   0 svchost
+    204      16     6616       4744      94.23  15568   0 svchost
+    392      17     4876      13928     504.28  16036   0 svchost
+    134       9     1768       5436      26.05  17544   0 svchost
+    163      10     2096       7544      31.67  18552   0 svchost
+    145       8     3788      10040       0.17  21092   0 svchost
+    530      17     7064      19512     287.81   9368   6 SynTPEnh
+    320      11     2424       3008       0.25   4288   0 SynTPEnhService
+     72       6     1060       3828       0.42  19972   6 SynTPHelper
+   5524       0      204       3208   6,671.16      4   0 System
+    859      40    20732         24       1.56   3520   6 SystemSettings
+    216      12     3032       7592       0.11   4908   6 taskhostw
+    345      41     9228      18696       2.38   8456   6 taskhostw
+    536      66    38336      43268      86.19   6536   6 TeamViewer
+    511      33    83388      23676     334.67  17212   0 TeamViewer_Service
+    278      25    17416       6820      10.45   4164   0 TNSLSNR
+    227      13     2920       7892       0.55  13032   6 tv_w32
+    207      12     2328       7976       0.44  12296   6 tv_x64
+    153       9     2104       2924       3.47   7084   0 unsecapp
+    178      13     3264       3420      10.28   4752   0 vmnat
+    343      17     6956       5324     398.09   4944   0 vmware-authd
+    477      35    36228      12380      33.03   7580   0 vmware-hostd
+    196      18     3852       8780       0.11  12908   6 vmware-tray
+    232      14     2924       3632       2.84   5288   0 vmware-usbarbitrator64
+    489      22    11352      38280       4.02  20404   6 WindowsInternal.ComposableShell.Experiences.TextInput.Inpu...
+    164      11     1628       2712       0.11    792   0 wininit
+    285      12     2712       8972       0.39  11208   6 winlogon
+    422      20     5368      10332      77.02   3756   0 wlanext
+    453      24    34168      41952     306.48   1624   0 WmiPrvSE
+    192      12     6884      12116       1.94  22412   0 WmiPrvSE
+    349      16    24940       5652       0.84    624   0 WUDFHost
+    267      12     2008       1756       0.13   1084   0 WUDFHost
+    246      10     1844       2076       0.34   1836   0 WUDFHost
+    801      46    21700      49580       1.98   7028   6 YourPhone
+    346      20     6064      10512      19.17   4304   0 ZeroConfigService
+
+
+PS C:\WINDOWS\system32> get-psdrive
+
+Name           Used (GB)     Free (GB) Provider      Root                                               CurrentLocation
+----           ---------     --------- --------      ----                                               ---------------
+Alias                                  Alias
+C                 401.84        114.55 FileSystem    C:\                                               WINDOWS\system32
+Cert                                   Certificate   \
+D                  12.31          1.52 FileSystem    D:\
+E                                      FileSystem    E:\
+Env                                    Environment
+F                 197.90        202.16 FileSystem    F:\
+Function                               Function
+HKCU                                   Registry      HKEY_CURRENT_USER
+HKLM                                   Registry      HKEY_LOCAL_MACHINE
+Variable                               Variable
+WSMan                                  WSMan
+
+
+PS C:\WINDOWS\system32> get-command
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Alias           Add-AppPackage                                     2.0.1.0    Appx
+Alias           Add-AppPackageVolume                               2.0.1.0    Appx
+Alias           Add-AppProvisionedPackage                          3.0        Dism
+Alias           Add-ProvisionedAppPackage                          3.0        Dism
+Alias           Add-ProvisionedAppxPackage                         3.0        Dism
+Alias           Add-ProvisioningPackage                            3.0        Provisioning
+Alias           Add-TrustedProvisioningCertificate                 3.0        Provisioning
+Alias           Apply-WindowsUnattend                              3.0        Dism
+Alias           Disable-PhysicalDiskIndication                     2.0.0.0    Storage
+Alias           Disable-StorageDiagnosticLog                       2.0.0.0    Storage
+Alias           Dismount-AppPackageVolume                          2.0.1.0    Appx
+Alias           Enable-PhysicalDiskIndication                      2.0.0.0    Storage
+Alias           Enable-StorageDiagnosticLog                        2.0.0.0    Storage
+Alias           Flush-Volume                                       2.0.0.0    Storage
+Alias           Get-AppPackage                                     2.0.1.0    Appx
+Alias           Get-AppPackageDefaultVolume                        2.0.1.0    Appx
+Alias           Get-AppPackageLastError                            2.0.1.0    Appx
+Alias           Get-AppPackageLog                                  2.0.1.0    Appx
+Alias           Get-AppPackageManifest                             2.0.1.0    Appx
+Alias           Get-AppPackageVolume                               2.0.1.0    Appx
+Alias           Get-AppProvisionedPackage                          3.0        Dism
+Alias           Get-DiskSNV                                        2.0.0.0    Storage
+Alias           Get-PhysicalDiskSNV                                2.0.0.0    Storage
+Alias           Get-ProvisionedAppPackage                          3.0        Dism
+Alias           Get-ProvisionedAppxPackage                         3.0        Dism
+Alias           Get-StorageEnclosureSNV                            2.0.0.0    Storage
+Alias           Initialize-Volume                                  2.0.0.0    Storage
+Alias           Mount-AppPackageVolume                             2.0.1.0    Appx
+Alias           Move-AppPackage                                    2.0.1.0    Appx
+Alias           Move-SmbClient                                     2.0.0.0    SmbWitness
+Alias           Optimize-AppProvisionedPackages                    3.0        Dism
+Alias           Optimize-ProvisionedAppPackages                    3.0        Dism
+Alias           Optimize-ProvisionedAppxPackages                   3.0        Dism
+Alias           Remove-AppPackage                                  2.0.1.0    Appx
+Alias           Remove-AppPackageVolume                            2.0.1.0    Appx
+Alias           Remove-AppProvisionedPackage                       3.0        Dism
+Alias           Remove-EtwTraceSession                             1.0.0.0    EventTracingManagement
+Alias           Remove-ProvisionedAppPackage                       3.0        Dism
+Alias           Remove-ProvisionedAppxPackage                      3.0        Dism
+Alias           Remove-ProvisioningPackage                         3.0        Provisioning
+Alias           Remove-TrustedProvisioningCertificate              3.0        Provisioning
+Alias           Set-AppPackageDefaultVolume                        2.0.1.0    Appx
+Alias           Set-AppPackageProvisionedDataFile                  3.0        Dism
+Alias           Set-AutologgerConfig                               1.0.0.0    EventTracingManagement
+Alias           Set-EtwTraceSession                                1.0.0.0    EventTracingManagement
+Alias           Set-ProvisionedAppPackageDataFile                  3.0        Dism
+Alias           Set-ProvisionedAppXDataFile                        3.0        Dism
+Alias           Write-FileSystemCache                              2.0.0.0    Storage
+Function        A:
+Function        Add-BitLockerKeyProtector                          1.0.0.0    BitLocker
+Function        Add-DnsClientNrptRule                              1.0.0.0    DnsClient
+Function        Add-DtcClusterTMMapping                            1.0.0.0    MsDtc
+Function        Add-EtwTraceProvider                               1.0.0.0    EventTracingManagement
+Function        Add-InitiatorIdToMaskingSet                        2.0.0.0    Storage
+Function        Add-MpPreference                                   1.0        ConfigDefender
+Function        Add-MpPreference                                   1.0        Defender
+Function        Add-NetEventNetworkAdapter                         1.0.0.0    NetEventPacketCapture
+Function        Add-NetEventPacketCaptureProvider                  1.0.0.0    NetEventPacketCapture
+Function        Add-NetEventProvider                               1.0.0.0    NetEventPacketCapture
+Function        Add-NetEventVFPProvider                            1.0.0.0    NetEventPacketCapture
+Function        Add-NetEventVmNetworkAdapter                       1.0.0.0    NetEventPacketCapture
+Function        Add-NetEventVmSwitch                               1.0.0.0    NetEventPacketCapture
+Function        Add-NetEventVmSwitchProvider                       1.0.0.0    NetEventPacketCapture
+Function        Add-NetEventWFPCaptureProvider                     1.0.0.0    NetEventPacketCapture
+Function        Add-NetIPHttpsCertBinding                          1.0.0.0    NetworkTransition
+Function        Add-NetLbfoTeamMember                              2.0.0.0    NetLbfo
+Function        Add-NetLbfoTeamNic                                 2.0.0.0    NetLbfo
+Function        Add-NetNatExternalAddress                          1.0.0.0    NetNat
+Function        Add-NetNatStaticMapping                            1.0.0.0    NetNat
+Function        Add-NetSwitchTeamMember                            1.0.0.0    NetSwitchTeam
+Function        Add-OdbcDsn                                        1.0.0.0    Wdac
+Function        Add-PartitionAccessPath                            2.0.0.0    Storage
+Function        Add-PhysicalDisk                                   2.0.0.0    Storage
+Function        Add-Printer                                        1.1        PrintManagement
+Function        Add-PrinterDriver                                  1.1        PrintManagement
+Function        Add-PrinterPort                                    1.1        PrintManagement
+Function        Add-StorageFaultDomain                             2.0.0.0    Storage
+Function        Add-TargetPortToMaskingSet                         2.0.0.0    Storage
+Function        Add-VirtualDiskToMaskingSet                        2.0.0.0    Storage
+Function        Add-VpnConnection                                  2.0.0.0    VpnClient
+Function        Add-VpnConnectionRoute                             2.0.0.0    VpnClient
+Function        Add-VpnConnectionTriggerApplication                2.0.0.0    VpnClient
+Function        Add-VpnConnectionTriggerDnsConfiguration           2.0.0.0    VpnClient
+Function        Add-VpnConnectionTriggerTrustedNetwork             2.0.0.0    VpnClient
+Function        AfterAll                                           3.4.0      Pester
+Function        AfterEach                                          3.4.0      Pester
+Function        Assert-MockCalled                                  3.4.0      Pester
+Function        Assert-VerifiableMocks                             3.4.0      Pester
+Function        B:
+Function        Backup-BitLockerKeyProtector                       1.0.0.0    BitLocker
+Function        BackupToAAD-BitLockerKeyProtector                  1.0.0.0    BitLocker
+Function        BeforeAll                                          3.4.0      Pester
+Function        BeforeEach                                         3.4.0      Pester
+Function        Block-FileShareAccess                              2.0.0.0    Storage
+Function        Block-SmbShareAccess                               2.0.0.0    SmbShare
+Function        C:
+Function        cd..
+Function        cd\
+Function        Clear-BitLockerAutoUnlock                          1.0.0.0    BitLocker
+Function        Clear-Disk                                         2.0.0.0    Storage
+Function        Clear-DnsClientCache                               1.0.0.0    DnsClient
+Function        Clear-FileStorageTier                              2.0.0.0    Storage
+Function        Clear-Host
+Function        Clear-PcsvDeviceLog                                1.0.0.0    PcsvDevice
+Function        Clear-StorageBusDisk                               1.0.0.0    StorageBusCache
+Function        Clear-StorageDiagnosticInfo                        2.0.0.0    Storage
+Function        Close-SmbOpenFile                                  2.0.0.0    SmbShare
+Function        Close-SmbSession                                   2.0.0.0    SmbShare
+Function        Compress-Archive                                   1.0.1.0    Microsoft.PowerShell.Archive
+Function        Configuration                                      1.1        PSDesiredStateConfiguration
+Function        Connect-IscsiTarget                                1.0.0.0    iSCSI
+Function        Connect-VirtualDisk                                2.0.0.0    Storage
+Function        Context                                            3.4.0      Pester
+Function        ConvertFrom-SddlString                             3.1.0.0    Microsoft.PowerShell.Utility
+Function        Copy-NetFirewallRule                               2.0.0.0    NetSecurity
+Function        Copy-NetIPsecMainModeCryptoSet                     2.0.0.0    NetSecurity
+Function        Copy-NetIPsecMainModeRule                          2.0.0.0    NetSecurity
+Function        Copy-NetIPsecPhase1AuthSet                         2.0.0.0    NetSecurity
+Function        Copy-NetIPsecPhase2AuthSet                         2.0.0.0    NetSecurity
+Function        Copy-NetIPsecQuickModeCryptoSet                    2.0.0.0    NetSecurity
+Function        Copy-NetIPsecRule                                  2.0.0.0    NetSecurity
+Function        D:
+Function        Debug-FileShare                                    2.0.0.0    Storage
+Function        Debug-MMAppPrelaunch                               1.0        MMAgent
+Function        Debug-StorageSubSystem                             2.0.0.0    Storage
+Function        Debug-Volume                                       2.0.0.0    Storage
+Function        Describe                                           3.4.0      Pester
+Function        Disable-BitLocker                                  1.0.0.0    BitLocker
+Function        Disable-BitLockerAutoUnlock                        1.0.0.0    BitLocker
+Function        Disable-DAManualEntryPointSelection                1.0.0.0    DirectAccessClientComponents
+Function        Disable-DscDebug                                   1.1        PSDesiredStateConfiguration
+Function        Disable-MMAgent                                    1.0        MMAgent
+Function        Disable-NetAdapter                                 2.0.0.0    NetAdapter
+Function        Disable-NetAdapterBinding                          2.0.0.0    NetAdapter
+Function        Disable-NetAdapterChecksumOffload                  2.0.0.0    NetAdapter
+Function        Disable-NetAdapterEncapsulatedPacketTaskOffload    2.0.0.0    NetAdapter
+Function        Disable-NetAdapterIPsecOffload                     2.0.0.0    NetAdapter
+Function        Disable-NetAdapterLso                              2.0.0.0    NetAdapter
+Function        Disable-NetAdapterPacketDirect                     2.0.0.0    NetAdapter
+Function        Disable-NetAdapterPowerManagement                  2.0.0.0    NetAdapter
+Function        Disable-NetAdapterQos                              2.0.0.0    NetAdapter
+Function        Disable-NetAdapterRdma                             2.0.0.0    NetAdapter
+Function        Disable-NetAdapterRsc                              2.0.0.0    NetAdapter
+Function        Disable-NetAdapterRss                              2.0.0.0    NetAdapter
+Function        Disable-NetAdapterSriov                            2.0.0.0    NetAdapter
+Function        Disable-NetAdapterUso                              2.0.0.0    NetAdapter
+Function        Disable-NetAdapterVmq                              2.0.0.0    NetAdapter
+Function        Disable-NetDnsTransitionConfiguration              1.0.0.0    NetworkTransition
+Function        Disable-NetFirewallRule                            2.0.0.0    NetSecurity
+Function        Disable-NetIPHttpsProfile                          1.0.0.0    NetworkTransition
+Function        Disable-NetIPsecMainModeRule                       2.0.0.0    NetSecurity
+Function        Disable-NetIPsecRule                               2.0.0.0    NetSecurity
+Function        Disable-NetNatTransitionConfiguration              1.0.0.0    NetworkTransition
+Function        Disable-NetworkSwitchEthernetPort                  1.0.0.0    NetworkSwitchManager
+Function        Disable-NetworkSwitchFeature                       1.0.0.0    NetworkSwitchManager
+Function        Disable-NetworkSwitchVlan                          1.0.0.0    NetworkSwitchManager
+Function        Disable-OdbcPerfCounter                            1.0.0.0    Wdac
+Function        Disable-PhysicalDiskIdentification                 2.0.0.0    Storage
+Function        Disable-PnpDevice                                  1.0.0.0    PnpDevice
+Function        Disable-PSTrace                                    1.0.0.0    PSDiagnostics
+Function        Disable-PSWSManCombinedTrace                       1.0.0.0    PSDiagnostics
+Function        Disable-ScheduledTask                              1.0.0.0    ScheduledTasks
+Function        Disable-SmbDelegation                              2.0.0.0    SmbShare
+Function        Disable-StorageBusCache                            1.0.0.0    StorageBusCache
+Function        Disable-StorageBusDisk                             1.0.0.0    StorageBusCache
+Function        Disable-StorageEnclosureIdentification             2.0.0.0    Storage
+Function        Disable-StorageEnclosurePower                      2.0.0.0    Storage
+Function        Disable-StorageHighAvailability                    2.0.0.0    Storage
+Function        Disable-StorageMaintenanceMode                     2.0.0.0    Storage
+Function        Disable-WdacBidTrace                               1.0.0.0    Wdac
+Function        Disable-WSManTrace                                 1.0.0.0    PSDiagnostics
+Function        Disconnect-IscsiTarget                             1.0.0.0    iSCSI
+Function        Disconnect-VirtualDisk                             2.0.0.0    Storage
+Function        Dismount-DiskImage                                 2.0.0.0    Storage
+Function        E:
+Function        Enable-BitLocker                                   1.0.0.0    BitLocker
+Function        Enable-BitLockerAutoUnlock                         1.0.0.0    BitLocker
+Function        Enable-DAManualEntryPointSelection                 1.0.0.0    DirectAccessClientComponents
+Function        Enable-DscDebug                                    1.1        PSDesiredStateConfiguration
+Function        Enable-MMAgent                                     1.0        MMAgent
+Function        Enable-NetAdapter                                  2.0.0.0    NetAdapter
+Function        Enable-NetAdapterBinding                           2.0.0.0    NetAdapter
+Function        Enable-NetAdapterChecksumOffload                   2.0.0.0    NetAdapter
+Function        Enable-NetAdapterEncapsulatedPacketTaskOffload     2.0.0.0    NetAdapter
+Function        Enable-NetAdapterIPsecOffload                      2.0.0.0    NetAdapter
+Function        Enable-NetAdapterLso                               2.0.0.0    NetAdapter
+Function        Enable-NetAdapterPacketDirect                      2.0.0.0    NetAdapter
+Function        Enable-NetAdapterPowerManagement                   2.0.0.0    NetAdapter
+Function        Enable-NetAdapterQos                               2.0.0.0    NetAdapter
+Function        Enable-NetAdapterRdma                              2.0.0.0    NetAdapter
+Function        Enable-NetAdapterRsc                               2.0.0.0    NetAdapter
+Function        Enable-NetAdapterRss                               2.0.0.0    NetAdapter
+Function        Enable-NetAdapterSriov                             2.0.0.0    NetAdapter
+Function        Enable-NetAdapterUso                               2.0.0.0    NetAdapter
+Function        Enable-NetAdapterVmq                               2.0.0.0    NetAdapter
+Function        Enable-NetDnsTransitionConfiguration               1.0.0.0    NetworkTransition
+Function        Enable-NetFirewallRule                             2.0.0.0    NetSecurity
+Function        Enable-NetIPHttpsProfile                           1.0.0.0    NetworkTransition
+Function        Enable-NetIPsecMainModeRule                        2.0.0.0    NetSecurity
+Function        Enable-NetIPsecRule                                2.0.0.0    NetSecurity
+Function        Enable-NetNatTransitionConfiguration               1.0.0.0    NetworkTransition
+Function        Enable-NetworkSwitchEthernetPort                   1.0.0.0    NetworkSwitchManager
+Function        Enable-NetworkSwitchFeature                        1.0.0.0    NetworkSwitchManager
+Function        Enable-NetworkSwitchVlan                           1.0.0.0    NetworkSwitchManager
+Function        Enable-OdbcPerfCounter                             1.0.0.0    Wdac
+Function        Enable-PhysicalDiskIdentification                  2.0.0.0    Storage
+Function        Enable-PnpDevice                                   1.0.0.0    PnpDevice
+Function        Enable-PSTrace                                     1.0.0.0    PSDiagnostics
+Function        Enable-PSWSManCombinedTrace                        1.0.0.0    PSDiagnostics
+Function        Enable-ScheduledTask                               1.0.0.0    ScheduledTasks
+Function        Enable-SmbDelegation                               2.0.0.0    SmbShare
+Function        Enable-StorageBusCache                             1.0.0.0    StorageBusCache
+Function        Enable-StorageBusDisk                              1.0.0.0    StorageBusCache
+Function        Enable-StorageEnclosureIdentification              2.0.0.0    Storage
+Function        Enable-StorageEnclosurePower                       2.0.0.0    Storage
+Function        Enable-StorageHighAvailability                     2.0.0.0    Storage
+Function        Enable-StorageMaintenanceMode                      2.0.0.0    Storage
+Function        Enable-WdacBidTrace                                1.0.0.0    Wdac
+Function        Enable-WSManTrace                                  1.0.0.0    PSDiagnostics
+Function        Expand-Archive                                     1.0.1.0    Microsoft.PowerShell.Archive
+Function        Export-ODataEndpointProxy                          1.0        Microsoft.PowerShell.ODataUtils
+Function        Export-ScheduledTask                               1.0.0.0    ScheduledTasks
+Function        F:
+Function        Find-Command                                       1.0.0.1    PowerShellGet
+Function        Find-DscResource                                   1.0.0.1    PowerShellGet
+Function        Find-Module                                        1.0.0.1    PowerShellGet
+Function        Find-NetIPsecRule                                  2.0.0.0    NetSecurity
+Function        Find-NetRoute                                      1.0.0.0    NetTCPIP
+Function        Find-RoleCapability                                1.0.0.1    PowerShellGet
+Function        Find-Script                                        1.0.0.1    PowerShellGet
+Function        Flush-EtwTraceSession                              1.0.0.0    EventTracingManagement
+Function        Format-Hex                                         3.1.0.0    Microsoft.PowerShell.Utility
+Function        Format-Volume                                      2.0.0.0    Storage
+Function        G:
+Function        Get-AppBackgroundTask                              1.0.0.0    AppBackgroundTask
+Function        Get-AppxLastError                                  2.0.1.0    Appx
+Function        Get-AppxLog                                        2.0.1.0    Appx
+Function        Get-AutologgerConfig                               1.0.0.0    EventTracingManagement
+Function        Get-BitLockerVolume                                1.0.0.0    BitLocker
+Function        Get-ClusteredScheduledTask                         1.0.0.0    ScheduledTasks
+Function        Get-DAClientExperienceConfiguration                1.0.0.0    DirectAccessClientComponents
+Function        Get-DAConnectionStatus                             1.0.0.0    NetworkConnectivityStatus
+Function        Get-DAEntryPointTableItem                          1.0.0.0    DirectAccessClientComponents
+Function        Get-DedupProperties                                2.0.0.0    Storage
+Function        Get-Disk                                           2.0.0.0    Storage
+Function        Get-DiskImage                                      2.0.0.0    Storage
+Function        Get-DiskStorageNodeView                            2.0.0.0    Storage
+Function        Get-DnsClient                                      1.0.0.0    DnsClient
+Function        Get-DnsClientCache                                 1.0.0.0    DnsClient
+Function        Get-DnsClientGlobalSetting                         1.0.0.0    DnsClient
+Function        Get-DnsClientNrptGlobal                            1.0.0.0    DnsClient
+Function        Get-DnsClientNrptPolicy                            1.0.0.0    DnsClient
+Function        Get-DnsClientNrptRule                              1.0.0.0    DnsClient
+Function        Get-DnsClientServerAddress                         1.0.0.0    DnsClient
+Function        Get-DscConfiguration                               1.1        PSDesiredStateConfiguration
+Function        Get-DscConfigurationStatus                         1.1        PSDesiredStateConfiguration
+Function        Get-DscLocalConfigurationManager                   1.1        PSDesiredStateConfiguration
+Function        Get-DscResource                                    1.1        PSDesiredStateConfiguration
+Function        Get-Dtc                                            1.0.0.0    MsDtc
+Function        Get-DtcAdvancedHostSetting                         1.0.0.0    MsDtc
+Function        Get-DtcAdvancedSetting                             1.0.0.0    MsDtc
+Function        Get-DtcClusterDefault                              1.0.0.0    MsDtc
+Function        Get-DtcClusterTMMapping                            1.0.0.0    MsDtc
+Function        Get-DtcDefault                                     1.0.0.0    MsDtc
+Function        Get-DtcLog                                         1.0.0.0    MsDtc
+Function        Get-DtcNetworkSetting                              1.0.0.0    MsDtc
+Function        Get-DtcTransaction                                 1.0.0.0    MsDtc
+Function        Get-DtcTransactionsStatistics                      1.0.0.0    MsDtc
+Function        Get-DtcTransactionsTraceSession                    1.0.0.0    MsDtc
+Function        Get-DtcTransactionsTraceSetting                    1.0.0.0    MsDtc
+Function        Get-EtwTraceProvider                               1.0.0.0    EventTracingManagement
+Function        Get-EtwTraceSession                                1.0.0.0    EventTracingManagement
+Function        Get-FileHash                                       3.1.0.0    Microsoft.PowerShell.Utility
+Function        Get-FileIntegrity                                  2.0.0.0    Storage
+Function        Get-FileShare                                      2.0.0.0    Storage
+Function        Get-FileShareAccessControlEntry                    2.0.0.0    Storage
+Function        Get-FileStorageTier                                2.0.0.0    Storage
+Function        Get-InitiatorId                                    2.0.0.0    Storage
+Function        Get-InitiatorPort                                  2.0.0.0    Storage
+Function        Get-InstalledModule                                1.0.0.1    PowerShellGet
+Function        Get-InstalledScript                                1.0.0.1    PowerShellGet
+Function        Get-IscsiConnection                                1.0.0.0    iSCSI
+Function        Get-IscsiSession                                   1.0.0.0    iSCSI
+Function        Get-IscsiTarget                                    1.0.0.0    iSCSI
+Function        Get-IscsiTargetPortal                              1.0.0.0    iSCSI
+Function        Get-IseSnippet                                     1.0.0.0    ISE
+Function        Get-LogProperties                                  1.0.0.0    PSDiagnostics
+Function        Get-MaskingSet                                     2.0.0.0    Storage
+Function        Get-MMAgent                                        1.0        MMAgent
+Function        Get-MockDynamicParameters                          3.4.0      Pester
+Function        Get-MpComputerStatus                               1.0        ConfigDefender
+Function        Get-MpComputerStatus                               1.0        Defender
+Function        Get-MpPreference                                   1.0        ConfigDefender
+Function        Get-MpPreference                                   1.0        Defender
+Function        Get-MpThreat                                       1.0        ConfigDefender
+Function        Get-MpThreat                                       1.0        Defender
+Function        Get-MpThreatCatalog                                1.0        ConfigDefender
+Function        Get-MpThreatCatalog                                1.0        Defender
+Function        Get-MpThreatDetection                              1.0        ConfigDefender
+Function        Get-MpThreatDetection                              1.0        Defender
+Function        Get-NCSIPolicyConfiguration                        1.0.0.0    NetworkConnectivityStatus
+Function        Get-Net6to4Configuration                           1.0.0.0    NetworkTransition
+Function        Get-NetAdapter                                     2.0.0.0    NetAdapter
+Function        Get-NetAdapterAdvancedProperty                     2.0.0.0    NetAdapter
+Function        Get-NetAdapterBinding                              2.0.0.0    NetAdapter
+Function        Get-NetAdapterChecksumOffload                      2.0.0.0    NetAdapter
+Function        Get-NetAdapterEncapsulatedPacketTaskOffload        2.0.0.0    NetAdapter
+Function        Get-NetAdapterHardwareInfo                         2.0.0.0    NetAdapter
+Function        Get-NetAdapterIPsecOffload                         2.0.0.0    NetAdapter
+Function        Get-NetAdapterLso                                  2.0.0.0    NetAdapter
+Function        Get-NetAdapterPacketDirect                         2.0.0.0    NetAdapter
+Function        Get-NetAdapterPowerManagement                      2.0.0.0    NetAdapter
+Function        Get-NetAdapterQos                                  2.0.0.0    NetAdapter
+Function        Get-NetAdapterRdma                                 2.0.0.0    NetAdapter
+Function        Get-NetAdapterRsc                                  2.0.0.0    NetAdapter
+Function        Get-NetAdapterRss                                  2.0.0.0    NetAdapter
+Function        Get-NetAdapterSriov                                2.0.0.0    NetAdapter
+Function        Get-NetAdapterSriovVf                              2.0.0.0    NetAdapter
+Function        Get-NetAdapterStatistics                           2.0.0.0    NetAdapter
+Function        Get-NetAdapterUso                                  2.0.0.0    NetAdapter
+Function        Get-NetAdapterVmq                                  2.0.0.0    NetAdapter
+Function        Get-NetAdapterVMQQueue                             2.0.0.0    NetAdapter
+Function        Get-NetAdapterVPort                                2.0.0.0    NetAdapter
+Function        Get-NetCompartment                                 1.0.0.0    NetTCPIP
+Function        Get-NetConnectionProfile                           1.0.0.0    NetConnection
+Function        Get-NetDnsTransitionConfiguration                  1.0.0.0    NetworkTransition
+Function        Get-NetDnsTransitionMonitoring                     1.0.0.0    NetworkTransition
+Function        Get-NetEventNetworkAdapter                         1.0.0.0    NetEventPacketCapture
+Function        Get-NetEventPacketCaptureProvider                  1.0.0.0    NetEventPacketCapture
+Function        Get-NetEventProvider                               1.0.0.0    NetEventPacketCapture
+Function        Get-NetEventSession                                1.0.0.0    NetEventPacketCapture
+Function        Get-NetEventVFPProvider                            1.0.0.0    NetEventPacketCapture
+Function        Get-NetEventVmNetworkAdapter                       1.0.0.0    NetEventPacketCapture
+Function        Get-NetEventVmSwitch                               1.0.0.0    NetEventPacketCapture
+Function        Get-NetEventVmSwitchProvider                       1.0.0.0    NetEventPacketCapture
+Function        Get-NetEventWFPCaptureProvider                     1.0.0.0    NetEventPacketCapture
+Function        Get-NetFirewallAddressFilter                       2.0.0.0    NetSecurity
+Function        Get-NetFirewallApplicationFilter                   2.0.0.0    NetSecurity
+Function        Get-NetFirewallInterfaceFilter                     2.0.0.0    NetSecurity
+Function        Get-NetFirewallInterfaceTypeFilter                 2.0.0.0    NetSecurity
+Function        Get-NetFirewallPortFilter                          2.0.0.0    NetSecurity
+Function        Get-NetFirewallProfile                             2.0.0.0    NetSecurity
+Function        Get-NetFirewallRule                                2.0.0.0    NetSecurity
+Function        Get-NetFirewallSecurityFilter                      2.0.0.0    NetSecurity
+Function        Get-NetFirewallServiceFilter                       2.0.0.0    NetSecurity
+Function        Get-NetFirewallSetting                             2.0.0.0    NetSecurity
+Function        Get-NetIPAddress                                   1.0.0.0    NetTCPIP
+Function        Get-NetIPConfiguration                             1.0.0.0    NetTCPIP
+Function        Get-NetIPHttpsConfiguration                        1.0.0.0    NetworkTransition
+Function        Get-NetIPHttpsState                                1.0.0.0    NetworkTransition
+Function        Get-NetIPInterface                                 1.0.0.0    NetTCPIP
+Function        Get-NetIPsecDospSetting                            2.0.0.0    NetSecurity
+Function        Get-NetIPsecMainModeCryptoSet                      2.0.0.0    NetSecurity
+Function        Get-NetIPsecMainModeRule                           2.0.0.0    NetSecurity
+Function        Get-NetIPsecMainModeSA                             2.0.0.0    NetSecurity
+Function        Get-NetIPsecPhase1AuthSet                          2.0.0.0    NetSecurity
+Function        Get-NetIPsecPhase2AuthSet                          2.0.0.0    NetSecurity
+Function        Get-NetIPsecQuickModeCryptoSet                     2.0.0.0    NetSecurity
+Function        Get-NetIPsecQuickModeSA                            2.0.0.0    NetSecurity
+Function        Get-NetIPsecRule                                   2.0.0.0    NetSecurity
+Function        Get-NetIPv4Protocol                                1.0.0.0    NetTCPIP
+Function        Get-NetIPv6Protocol                                1.0.0.0    NetTCPIP
+Function        Get-NetIsatapConfiguration                         1.0.0.0    NetworkTransition
+Function        Get-NetLbfoTeam                                    2.0.0.0    NetLbfo
+Function        Get-NetLbfoTeamMember                              2.0.0.0    NetLbfo
+Function        Get-NetLbfoTeamNic                                 2.0.0.0    NetLbfo
+Function        Get-NetNat                                         1.0.0.0    NetNat
+Function        Get-NetNatExternalAddress                          1.0.0.0    NetNat
+Function        Get-NetNatGlobal                                   1.0.0.0    NetNat
+Function        Get-NetNatSession                                  1.0.0.0    NetNat
+Function        Get-NetNatStaticMapping                            1.0.0.0    NetNat
+Function        Get-NetNatTransitionConfiguration                  1.0.0.0    NetworkTransition
+Function        Get-NetNatTransitionMonitoring                     1.0.0.0    NetworkTransition
+Function        Get-NetNeighbor                                    1.0.0.0    NetTCPIP
+Function        Get-NetOffloadGlobalSetting                        1.0.0.0    NetTCPIP
+Function        Get-NetPrefixPolicy                                1.0.0.0    NetTCPIP
+Function        Get-NetQosPolicy                                   2.0.0.0    NetQos
+Function        Get-NetRoute                                       1.0.0.0    NetTCPIP
+Function        Get-NetSwitchTeam                                  1.0.0.0    NetSwitchTeam
+Function        Get-NetSwitchTeamMember                            1.0.0.0    NetSwitchTeam
+Function        Get-NetTCPConnection                               1.0.0.0    NetTCPIP
+Function        Get-NetTCPSetting                                  1.0.0.0    NetTCPIP
+Function        Get-NetTeredoConfiguration                         1.0.0.0    NetworkTransition
+Function        Get-NetTeredoState                                 1.0.0.0    NetworkTransition
+Function        Get-NetTransportFilter                             1.0.0.0    NetTCPIP
+Function        Get-NetUDPEndpoint                                 1.0.0.0    NetTCPIP
+Function        Get-NetUDPSetting                                  1.0.0.0    NetTCPIP
+Function        Get-NetworkSwitchEthernetPort                      1.0.0.0    NetworkSwitchManager
+Function        Get-NetworkSwitchFeature                           1.0.0.0    NetworkSwitchManager
+Function        Get-NetworkSwitchGlobalData                        1.0.0.0    NetworkSwitchManager
+Function        Get-NetworkSwitchVlan                              1.0.0.0    NetworkSwitchManager
+Function        Get-OdbcDriver                                     1.0.0.0    Wdac
+Function        Get-OdbcDsn                                        1.0.0.0    Wdac
+Function        Get-OdbcPerfCounter                                1.0.0.0    Wdac
+Function        Get-OffloadDataTransferSetting                     2.0.0.0    Storage
+Function        Get-OperationValidation                            1.0.1      Microsoft.PowerShell.Operation.Validation
+Function        Get-Partition                                      2.0.0.0    Storage
+Function        Get-PartitionSupportedSize                         2.0.0.0    Storage
+Function        Get-PcsvDevice                                     1.0.0.0    PcsvDevice
+Function        Get-PcsvDeviceLog                                  1.0.0.0    PcsvDevice
+Function        Get-PhysicalDisk                                   2.0.0.0    Storage
+Function        Get-PhysicalDiskStorageNodeView                    2.0.0.0    Storage
+Function        Get-PhysicalExtent                                 2.0.0.0    Storage
+Function        Get-PhysicalExtentAssociation                      2.0.0.0    Storage
+Function        Get-PnpDevice                                      1.0.0.0    PnpDevice
+Function        Get-PnpDeviceProperty                              1.0.0.0    PnpDevice
+Function        Get-PrintConfiguration                             1.1        PrintManagement
+Function        Get-Printer                                        1.1        PrintManagement
+Function        Get-PrinterDriver                                  1.1        PrintManagement
+Function        Get-PrinterPort                                    1.1        PrintManagement
+Function        Get-PrinterProperty                                1.1        PrintManagement
+Function        Get-PrintJob                                       1.1        PrintManagement
+Function        Get-PSRepository                                   1.0.0.1    PowerShellGet
+Function        Get-ResiliencySetting                              2.0.0.0    Storage
+Function        Get-ScheduledTask                                  1.0.0.0    ScheduledTasks
+Function        Get-ScheduledTaskInfo                              1.0.0.0    ScheduledTasks
+Function        Get-SmbBandWidthLimit                              2.0.0.0    SmbShare
+Function        Get-SmbClientConfiguration                         2.0.0.0    SmbShare
+Function        Get-SmbClientNetworkInterface                      2.0.0.0    SmbShare
+Function        Get-SmbConnection                                  2.0.0.0    SmbShare
+Function        Get-SmbDelegation                                  2.0.0.0    SmbShare
+Function        Get-SmbGlobalMapping                               2.0.0.0    SmbShare
+Function        Get-SmbMapping                                     2.0.0.0    SmbShare
+Function        Get-SmbMultichannelConnection                      2.0.0.0    SmbShare
+Function        Get-SmbMultichannelConstraint                      2.0.0.0    SmbShare
+Function        Get-SmbOpenFile                                    2.0.0.0    SmbShare
+Function        Get-SmbServerConfiguration                         2.0.0.0    SmbShare
+Function        Get-SmbServerNetworkInterface                      2.0.0.0    SmbShare
+Function        Get-SmbSession                                     2.0.0.0    SmbShare
+Function        Get-SmbShare                                       2.0.0.0    SmbShare
+Function        Get-SmbShareAccess                                 2.0.0.0    SmbShare
+Function        Get-SmbWitnessClient                               2.0.0.0    SmbWitness
+Function        Get-StartApps                                      1.0.0.0    StartLayout
+Function        Get-StorageAdvancedProperty                        2.0.0.0    Storage
+Function        Get-StorageBusBinding                              1.0.0.0    StorageBusCache
+Function        Get-StorageBusDisk                                 1.0.0.0    StorageBusCache
+Function        Get-StorageChassis                                 2.0.0.0    Storage
+Function        Get-StorageDiagnosticInfo                          2.0.0.0    Storage
+Function        Get-StorageEnclosure                               2.0.0.0    Storage
+Function        Get-StorageEnclosureStorageNodeView                2.0.0.0    Storage
+Function        Get-StorageEnclosureVendorData                     2.0.0.0    Storage
+Function        Get-StorageExtendedStatus                          2.0.0.0    Storage
+Function        Get-StorageFaultDomain                             2.0.0.0    Storage
+Function        Get-StorageFileServer                              2.0.0.0    Storage
+Function        Get-StorageFirmwareInformation                     2.0.0.0    Storage
+Function        Get-StorageHealthAction                            2.0.0.0    Storage
+Function        Get-StorageHealthReport                            2.0.0.0    Storage
+Function        Get-StorageHealthSetting                           2.0.0.0    Storage
+Function        Get-StorageHistory                                 2.0.0.0    Storage
+Function        Get-StorageJob                                     2.0.0.0    Storage
+Function        Get-StorageNode                                    2.0.0.0    Storage
+Function        Get-StoragePool                                    2.0.0.0    Storage
+Function        Get-StorageProvider                                2.0.0.0    Storage
+Function        Get-StorageRack                                    2.0.0.0    Storage
+Function        Get-StorageReliabilityCounter                      2.0.0.0    Storage
+Function        Get-StorageScaleUnit                               2.0.0.0    Storage
+Function        Get-StorageSetting                                 2.0.0.0    Storage
+Function        Get-StorageSite                                    2.0.0.0    Storage
+Function        Get-StorageSubSystem                               2.0.0.0    Storage
+Function        Get-StorageTier                                    2.0.0.0    Storage
+Function        Get-StorageTierSupportedSize                       2.0.0.0    Storage
+Function        Get-SupportedClusterSizes                          2.0.0.0    Storage
+Function        Get-SupportedFileSystems                           2.0.0.0    Storage
+Function        Get-TargetPort                                     2.0.0.0    Storage
+Function        Get-TargetPortal                                   2.0.0.0    Storage
+Function        Get-TestDriveItem                                  3.4.0      Pester
+Function        Get-Verb
+Function        Get-VirtualDisk                                    2.0.0.0    Storage
+Function        Get-VirtualDiskSupportedSize                       2.0.0.0    Storage
+Function        Get-Volume                                         2.0.0.0    Storage
+Function        Get-VolumeCorruptionCount                          2.0.0.0    Storage
+Function        Get-VolumeScrubPolicy                              2.0.0.0    Storage
+Function        Get-VpnConnection                                  2.0.0.0    VpnClient
+Function        Get-VpnConnectionTrigger                           2.0.0.0    VpnClient
+Function        Get-WdacBidTrace                                   1.0.0.0    Wdac
+Function        Get-WindowsUpdateLog                               1.0.0.0    WindowsUpdate
+Function        Get-WUAVersion                                     1.0.0.2    WindowsUpdateProvider
+Function        Get-WUIsPendingReboot                              1.0.0.2    WindowsUpdateProvider
+Function        Get-WULastInstallationDate                         1.0.0.2    WindowsUpdateProvider
+Function        Get-WULastScanSuccessDate                          1.0.0.2    WindowsUpdateProvider
+Function        Grant-FileShareAccess                              2.0.0.0    Storage
+Function        Grant-SmbShareAccess                               2.0.0.0    SmbShare
+Function        H:
+Function        help
+Function        Hide-VirtualDisk                                   2.0.0.0    Storage
+Function        I:
+Function        Import-IseSnippet                                  1.0.0.0    ISE
+Function        Import-PowerShellDataFile                          3.1.0.0    Microsoft.PowerShell.Utility
+Function        ImportSystemModules
+Function        In                                                 3.4.0      Pester
+Function        Initialize-Disk                                    2.0.0.0    Storage
+Function        InModuleScope                                      3.4.0      Pester
+Function        Install-Dtc                                        1.0.0.0    MsDtc
+Function        Install-Module                                     1.0.0.1    PowerShellGet
+Function        Install-Script                                     1.0.0.1    PowerShellGet
+Function        Install-WUUpdates                                  1.0.0.2    WindowsUpdateProvider
+Function        Invoke-AsWorkflow                                  1.0.0.0    PSWorkflowUtility
+Function        Invoke-Mock                                        3.4.0      Pester
+Function        Invoke-OperationValidation                         1.0.1      Microsoft.PowerShell.Operation.Validation
+Function        Invoke-Pester                                      3.4.0      Pester
+Function        It                                                 3.4.0      Pester
+Function        J:
+Function        K:
+Function        L:
+Function        Lock-BitLocker                                     1.0.0.0    BitLocker
+Function        M:
+Function        mkdir
+Function        Mock                                               3.4.0      Pester
+Function        more
+Function        Mount-DiskImage                                    2.0.0.0    Storage
+Function        Move-SmbWitnessClient                              2.0.0.0    SmbWitness
+Function        N:
+Function        New-AutologgerConfig                               1.0.0.0    EventTracingManagement
+Function        New-DAEntryPointTableItem                          1.0.0.0    DirectAccessClientComponents
+Function        New-DscChecksum                                    1.1        PSDesiredStateConfiguration
+Function        New-EapConfiguration                               2.0.0.0    VpnClient
+Function        New-EtwTraceSession                                1.0.0.0    EventTracingManagement
+Function        New-FileShare                                      2.0.0.0    Storage
+Function        New-Fixture                                        3.4.0      Pester
+Function        New-Guid                                           3.1.0.0    Microsoft.PowerShell.Utility
+Function        New-IscsiTargetPortal                              1.0.0.0    iSCSI
+Function        New-IseSnippet                                     1.0.0.0    ISE
+Function        New-MaskingSet                                     2.0.0.0    Storage
+Function        New-NetAdapterAdvancedProperty                     2.0.0.0    NetAdapter
+Function        New-NetEventSession                                1.0.0.0    NetEventPacketCapture
+Function        New-NetFirewallRule                                2.0.0.0    NetSecurity
+Function        New-NetIPAddress                                   1.0.0.0    NetTCPIP
+Function        New-NetIPHttpsConfiguration                        1.0.0.0    NetworkTransition
+Function        New-NetIPsecDospSetting                            2.0.0.0    NetSecurity
+Function        New-NetIPsecMainModeCryptoSet                      2.0.0.0    NetSecurity
+Function        New-NetIPsecMainModeRule                           2.0.0.0    NetSecurity
+Function        New-NetIPsecPhase1AuthSet                          2.0.0.0    NetSecurity
+Function        New-NetIPsecPhase2AuthSet                          2.0.0.0    NetSecurity
+Function        New-NetIPsecQuickModeCryptoSet                     2.0.0.0    NetSecurity
+Function        New-NetIPsecRule                                   2.0.0.0    NetSecurity
+Function        New-NetLbfoTeam                                    2.0.0.0    NetLbfo
+Function        New-NetNat                                         1.0.0.0    NetNat
+Function        New-NetNatTransitionConfiguration                  1.0.0.0    NetworkTransition
+Function        New-NetNeighbor                                    1.0.0.0    NetTCPIP
+Function        New-NetQosPolicy                                   2.0.0.0    NetQos
+Function        New-NetRoute                                       1.0.0.0    NetTCPIP
+Function        New-NetSwitchTeam                                  1.0.0.0    NetSwitchTeam
+Function        New-NetTransportFilter                             1.0.0.0    NetTCPIP
+Function        New-NetworkSwitchVlan                              1.0.0.0    NetworkSwitchManager
+Function        New-Partition                                      2.0.0.0    Storage
+Function        New-PesterOption                                   3.4.0      Pester
+Function        New-PSWorkflowSession                              2.0.0.0    PSWorkflow
+Function        New-ScheduledTask                                  1.0.0.0    ScheduledTasks
+Function        New-ScheduledTaskAction                            1.0.0.0    ScheduledTasks
+Function        New-ScheduledTaskPrincipal                         1.0.0.0    ScheduledTasks
+Function        New-ScheduledTaskSettingsSet                       1.0.0.0    ScheduledTasks
+Function        New-ScheduledTaskTrigger                           1.0.0.0    ScheduledTasks
+Function        New-ScriptFileInfo                                 1.0.0.1    PowerShellGet
+Function        New-SmbGlobalMapping                               2.0.0.0    SmbShare
+Function        New-SmbMapping                                     2.0.0.0    SmbShare
+Function        New-SmbMultichannelConstraint                      2.0.0.0    SmbShare
+Function        New-SmbShare                                       2.0.0.0    SmbShare
+Function        New-StorageBusBinding                              1.0.0.0    StorageBusCache
+Function        New-StorageBusCacheStore                           1.0.0.0    StorageBusCache
+Function        New-StorageFileServer                              2.0.0.0    Storage
+Function        New-StoragePool                                    2.0.0.0    Storage
+Function        New-StorageSubsystemVirtualDisk                    2.0.0.0    Storage
+Function        New-StorageTier                                    2.0.0.0    Storage
+Function        New-TemporaryFile                                  3.1.0.0    Microsoft.PowerShell.Utility
+Function        New-VirtualDisk                                    2.0.0.0    Storage
+Function        New-VirtualDiskClone                               2.0.0.0    Storage
+Function        New-VirtualDiskSnapshot                            2.0.0.0    Storage
+Function        New-Volume                                         2.0.0.0    Storage
+Function        New-VpnServerAddress                               2.0.0.0    VpnClient
+Function        O:
+Function        Open-NetGPO                                        2.0.0.0    NetSecurity
+Function        Optimize-StoragePool                               2.0.0.0    Storage
+Function        Optimize-Volume                                    2.0.0.0    Storage
+Function        oss
+Function        P:
+Function        Pause
+Function        prompt
+Function        PSConsoleHostReadLine                              2.0.0      PSReadline
+Function        Publish-Module                                     1.0.0.1    PowerShellGet
+Function        Publish-Script                                     1.0.0.1    PowerShellGet
+Function        Q:
+Function        R:
+Function        Read-PrinterNfcTag                                 1.1        PrintManagement
+Function        Register-ClusteredScheduledTask                    1.0.0.0    ScheduledTasks
+Function        Register-DnsClient                                 1.0.0.0    DnsClient
+Function        Register-IscsiSession                              1.0.0.0    iSCSI
+Function        Register-PSRepository                              1.0.0.1    PowerShellGet
+Function        Register-ScheduledTask                             1.0.0.0    ScheduledTasks
+Function        Register-StorageSubsystem                          2.0.0.0    Storage
+Function        Remove-AutologgerConfig                            1.0.0.0    EventTracingManagement
+Function        Remove-BitLockerKeyProtector                       1.0.0.0    BitLocker
+Function        Remove-DAEntryPointTableItem                       1.0.0.0    DirectAccessClientComponents
+Function        Remove-DnsClientNrptRule                           1.0.0.0    DnsClient
+Function        Remove-DscConfigurationDocument                    1.1        PSDesiredStateConfiguration
+Function        Remove-DtcClusterTMMapping                         1.0.0.0    MsDtc
+Function        Remove-EtwTraceProvider                            1.0.0.0    EventTracingManagement
+Function        Remove-FileShare                                   2.0.0.0    Storage
+Function        Remove-InitiatorId                                 2.0.0.0    Storage
+Function        Remove-InitiatorIdFromMaskingSet                   2.0.0.0    Storage
+Function        Remove-IscsiTargetPortal                           1.0.0.0    iSCSI
+Function        Remove-MaskingSet                                  2.0.0.0    Storage
+Function        Remove-MpPreference                                1.0        ConfigDefender
+Function        Remove-MpPreference                                1.0        Defender
+Function        Remove-MpThreat                                    1.0        ConfigDefender
+Function        Remove-MpThreat                                    1.0        Defender
+Function        Remove-NetAdapterAdvancedProperty                  2.0.0.0    NetAdapter
+Function        Remove-NetEventNetworkAdapter                      1.0.0.0    NetEventPacketCapture
+Function        Remove-NetEventPacketCaptureProvider               1.0.0.0    NetEventPacketCapture
+Function        Remove-NetEventProvider                            1.0.0.0    NetEventPacketCapture
+Function        Remove-NetEventSession                             1.0.0.0    NetEventPacketCapture
+Function        Remove-NetEventVFPProvider                         1.0.0.0    NetEventPacketCapture
+Function        Remove-NetEventVmNetworkAdapter                    1.0.0.0    NetEventPacketCapture
+Function        Remove-NetEventVmSwitch                            1.0.0.0    NetEventPacketCapture
+Function        Remove-NetEventVmSwitchProvider                    1.0.0.0    NetEventPacketCapture
+Function        Remove-NetEventWFPCaptureProvider                  1.0.0.0    NetEventPacketCapture
+Function        Remove-NetFirewallRule                             2.0.0.0    NetSecurity
+Function        Remove-NetIPAddress                                1.0.0.0    NetTCPIP
+Function        Remove-NetIPHttpsCertBinding                       1.0.0.0    NetworkTransition
+Function        Remove-NetIPHttpsConfiguration                     1.0.0.0    NetworkTransition
+Function        Remove-NetIPsecDospSetting                         2.0.0.0    NetSecurity
+Function        Remove-NetIPsecMainModeCryptoSet                   2.0.0.0    NetSecurity
+Function        Remove-NetIPsecMainModeRule                        2.0.0.0    NetSecurity
+Function        Remove-NetIPsecMainModeSA                          2.0.0.0    NetSecurity
+Function        Remove-NetIPsecPhase1AuthSet                       2.0.0.0    NetSecurity
+Function        Remove-NetIPsecPhase2AuthSet                       2.0.0.0    NetSecurity
+Function        Remove-NetIPsecQuickModeCryptoSet                  2.0.0.0    NetSecurity
+Function        Remove-NetIPsecQuickModeSA                         2.0.0.0    NetSecurity
+Function        Remove-NetIPsecRule                                2.0.0.0    NetSecurity
+Function        Remove-NetLbfoTeam                                 2.0.0.0    NetLbfo
+Function        Remove-NetLbfoTeamMember                           2.0.0.0    NetLbfo
+Function        Remove-NetLbfoTeamNic                              2.0.0.0    NetLbfo
+Function        Remove-NetNat                                      1.0.0.0    NetNat
+Function        Remove-NetNatExternalAddress                       1.0.0.0    NetNat
+Function        Remove-NetNatStaticMapping                         1.0.0.0    NetNat
+Function        Remove-NetNatTransitionConfiguration               1.0.0.0    NetworkTransition
+Function        Remove-NetNeighbor                                 1.0.0.0    NetTCPIP
+Function        Remove-NetQosPolicy                                2.0.0.0    NetQos
+Function        Remove-NetRoute                                    1.0.0.0    NetTCPIP
+Function        Remove-NetSwitchTeam                               1.0.0.0    NetSwitchTeam
+Function        Remove-NetSwitchTeamMember                         1.0.0.0    NetSwitchTeam
+Function        Remove-NetTransportFilter                          1.0.0.0    NetTCPIP
+Function        Remove-NetworkSwitchEthernetPortIPAddress          1.0.0.0    NetworkSwitchManager
+Function        Remove-NetworkSwitchVlan                           1.0.0.0    NetworkSwitchManager
+Function        Remove-OdbcDsn                                     1.0.0.0    Wdac
+Function        Remove-Partition                                   2.0.0.0    Storage
+Function        Remove-PartitionAccessPath                         2.0.0.0    Storage
+Function        Remove-PhysicalDisk                                2.0.0.0    Storage
+Function        Remove-Printer                                     1.1        PrintManagement
+Function        Remove-PrinterDriver                               1.1        PrintManagement
+Function        Remove-PrinterPort                                 1.1        PrintManagement
+Function        Remove-PrintJob                                    1.1        PrintManagement
+Function        Remove-SmbBandwidthLimit                           2.0.0.0    SmbShare
+Function        Remove-SmbGlobalMapping                            2.0.0.0    SmbShare
+Function        Remove-SmbMapping                                  2.0.0.0    SmbShare
+Function        Remove-SmbMultichannelConstraint                   2.0.0.0    SmbShare
+Function        Remove-SmbShare                                    2.0.0.0    SmbShare
+Function        Remove-StorageBusBinding                           1.0.0.0    StorageBusCache
+Function        Remove-StorageFaultDomain                          2.0.0.0    Storage
+Function        Remove-StorageFileServer                           2.0.0.0    Storage
+Function        Remove-StorageHealthIntent                         2.0.0.0    Storage
+Function        Remove-StorageHealthSetting                        2.0.0.0    Storage
+Function        Remove-StoragePool                                 2.0.0.0    Storage
+Function        Remove-StorageTier                                 2.0.0.0    Storage
+Function        Remove-TargetPortFromMaskingSet                    2.0.0.0    Storage
+Function        Remove-VirtualDisk                                 2.0.0.0    Storage
+Function        Remove-VirtualDiskFromMaskingSet                   2.0.0.0    Storage
+Function        Remove-VpnConnection                               2.0.0.0    VpnClient
+Function        Remove-VpnConnectionRoute                          2.0.0.0    VpnClient
+Function        Remove-VpnConnectionTriggerApplication             2.0.0.0    VpnClient
+Function        Remove-VpnConnectionTriggerDnsConfiguration        2.0.0.0    VpnClient
+Function        Remove-VpnConnectionTriggerTrustedNetwork          2.0.0.0    VpnClient
+Function        Rename-DAEntryPointTableItem                       1.0.0.0    DirectAccessClientComponents
+Function        Rename-MaskingSet                                  2.0.0.0    Storage
+Function        Rename-NetAdapter                                  2.0.0.0    NetAdapter
+Function        Rename-NetFirewallRule                             2.0.0.0    NetSecurity
+Function        Rename-NetIPHttpsConfiguration                     1.0.0.0    NetworkTransition
+Function        Rename-NetIPsecMainModeCryptoSet                   2.0.0.0    NetSecurity
+Function        Rename-NetIPsecMainModeRule                        2.0.0.0    NetSecurity
+Function        Rename-NetIPsecPhase1AuthSet                       2.0.0.0    NetSecurity
+Function        Rename-NetIPsecPhase2AuthSet                       2.0.0.0    NetSecurity
+Function        Rename-NetIPsecQuickModeCryptoSet                  2.0.0.0    NetSecurity
+Function        Rename-NetIPsecRule                                2.0.0.0    NetSecurity
+Function        Rename-NetLbfoTeam                                 2.0.0.0    NetLbfo
+Function        Rename-NetSwitchTeam                               1.0.0.0    NetSwitchTeam
+Function        Rename-Printer                                     1.1        PrintManagement
+Function        Repair-FileIntegrity                               2.0.0.0    Storage
+Function        Repair-VirtualDisk                                 2.0.0.0    Storage
+Function        Repair-Volume                                      2.0.0.0    Storage
+Function        Reset-DAClientExperienceConfiguration              1.0.0.0    DirectAccessClientComponents
+Function        Reset-DAEntryPointTableItem                        1.0.0.0    DirectAccessClientComponents
+Function        Reset-DtcLog                                       1.0.0.0    MsDtc
+Function        Reset-NCSIPolicyConfiguration                      1.0.0.0    NetworkConnectivityStatus
+Function        Reset-Net6to4Configuration                         1.0.0.0    NetworkTransition
+Function        Reset-NetAdapterAdvancedProperty                   2.0.0.0    NetAdapter
+Function        Reset-NetDnsTransitionConfiguration                1.0.0.0    NetworkTransition
+Function        Reset-NetIPHttpsConfiguration                      1.0.0.0    NetworkTransition
+Function        Reset-NetIsatapConfiguration                       1.0.0.0    NetworkTransition
+Function        Reset-NetTeredoConfiguration                       1.0.0.0    NetworkTransition
+Function        Reset-PhysicalDisk                                 2.0.0.0    Storage
+Function        Reset-StorageReliabilityCounter                    2.0.0.0    Storage
+Function        Resize-Partition                                   2.0.0.0    Storage
+Function        Resize-StorageTier                                 2.0.0.0    Storage
+Function        Resize-VirtualDisk                                 2.0.0.0    Storage
+Function        Restart-NetAdapter                                 2.0.0.0    NetAdapter
+Function        Restart-PcsvDevice                                 1.0.0.0    PcsvDevice
+Function        Restart-PrintJob                                   1.1        PrintManagement
+Function        Restore-DscConfiguration                           1.1        PSDesiredStateConfiguration
+Function        Restore-NetworkSwitchConfiguration                 1.0.0.0    NetworkSwitchManager
+Function        Resume-BitLocker                                   1.0.0.0    BitLocker
+Function        Resume-PrintJob                                    1.1        PrintManagement
+Function        Resume-StorageBusDisk                              1.0.0.0    StorageBusCache
+Function        Revoke-FileShareAccess                             2.0.0.0    Storage
+Function        Revoke-SmbShareAccess                              2.0.0.0    SmbShare
+Function        S:
+Function        SafeGetCommand                                     3.4.0      Pester
+Function        Save-EtwTraceSession                               1.0.0.0    EventTracingManagement
+Function        Save-Module                                        1.0.0.1    PowerShellGet
+Function        Save-NetGPO                                        2.0.0.0    NetSecurity
+Function        Save-NetworkSwitchConfiguration                    1.0.0.0    NetworkSwitchManager
+Function        Save-Script                                        1.0.0.1    PowerShellGet
+Function        Send-EtwTraceSession                               1.0.0.0    EventTracingManagement
+Function        Set-ClusteredScheduledTask                         1.0.0.0    ScheduledTasks
+Function        Set-DAClientExperienceConfiguration                1.0.0.0    DirectAccessClientComponents
+Function        Set-DAEntryPointTableItem                          1.0.0.0    DirectAccessClientComponents
+Function        Set-Disk                                           2.0.0.0    Storage
+Function        Set-DnsClient                                      1.0.0.0    DnsClient
+Function        Set-DnsClientGlobalSetting                         1.0.0.0    DnsClient
+Function        Set-DnsClientNrptGlobal                            1.0.0.0    DnsClient
+Function        Set-DnsClientNrptRule                              1.0.0.0    DnsClient
+Function        Set-DnsClientServerAddress                         1.0.0.0    DnsClient
+Function        Set-DtcAdvancedHostSetting                         1.0.0.0    MsDtc
+Function        Set-DtcAdvancedSetting                             1.0.0.0    MsDtc
+Function        Set-DtcClusterDefault                              1.0.0.0    MsDtc
+Function        Set-DtcClusterTMMapping                            1.0.0.0    MsDtc
+Function        Set-DtcDefault                                     1.0.0.0    MsDtc
+Function        Set-DtcLog                                         1.0.0.0    MsDtc
+Function        Set-DtcNetworkSetting                              1.0.0.0    MsDtc
+Function        Set-DtcTransaction                                 1.0.0.0    MsDtc
+Function        Set-DtcTransactionsTraceSession                    1.0.0.0    MsDtc
+Function        Set-DtcTransactionsTraceSetting                    1.0.0.0    MsDtc
+Function        Set-DynamicParameterVariables                      3.4.0      Pester
+Function        Set-EtwTraceProvider                               1.0.0.0    EventTracingManagement
+Function        Set-FileIntegrity                                  2.0.0.0    Storage
+Function        Set-FileShare                                      2.0.0.0    Storage
+Function        Set-FileStorageTier                                2.0.0.0    Storage
+Function        Set-InitiatorPort                                  2.0.0.0    Storage
+Function        Set-IscsiChapSecret                                1.0.0.0    iSCSI
+Function        Set-LogProperties                                  1.0.0.0    PSDiagnostics
+Function        Set-MMAgent                                        1.0        MMAgent
+Function        Set-MpPreference                                   1.0        ConfigDefender
+Function        Set-MpPreference                                   1.0        Defender
+Function        Set-NCSIPolicyConfiguration                        1.0.0.0    NetworkConnectivityStatus
+Function        Set-Net6to4Configuration                           1.0.0.0    NetworkTransition
+Function        Set-NetAdapter                                     2.0.0.0    NetAdapter
+Function        Set-NetAdapterAdvancedProperty                     2.0.0.0    NetAdapter
+Function        Set-NetAdapterBinding                              2.0.0.0    NetAdapter
+Function        Set-NetAdapterChecksumOffload                      2.0.0.0    NetAdapter
+Function        Set-NetAdapterEncapsulatedPacketTaskOffload        2.0.0.0    NetAdapter
+Function        Set-NetAdapterIPsecOffload                         2.0.0.0    NetAdapter
+Function        Set-NetAdapterLso                                  2.0.0.0    NetAdapter
+Function        Set-NetAdapterPacketDirect                         2.0.0.0    NetAdapter
+Function        Set-NetAdapterPowerManagement                      2.0.0.0    NetAdapter
+Function        Set-NetAdapterQos                                  2.0.0.0    NetAdapter
+Function        Set-NetAdapterRdma                                 2.0.0.0    NetAdapter
+Function        Set-NetAdapterRsc                                  2.0.0.0    NetAdapter
+Function        Set-NetAdapterRss                                  2.0.0.0    NetAdapter
+Function        Set-NetAdapterSriov                                2.0.0.0    NetAdapter
+Function        Set-NetAdapterUso                                  2.0.0.0    NetAdapter
+Function        Set-NetAdapterVmq                                  2.0.0.0    NetAdapter
+Function        Set-NetConnectionProfile                           1.0.0.0    NetConnection
+Function        Set-NetDnsTransitionConfiguration                  1.0.0.0    NetworkTransition
+Function        Set-NetEventPacketCaptureProvider                  1.0.0.0    NetEventPacketCapture
+Function        Set-NetEventProvider                               1.0.0.0    NetEventPacketCapture
+Function        Set-NetEventSession                                1.0.0.0    NetEventPacketCapture
+Function        Set-NetEventVFPProvider                            1.0.0.0    NetEventPacketCapture
+Function        Set-NetEventVmSwitchProvider                       1.0.0.0    NetEventPacketCapture
+Function        Set-NetEventWFPCaptureProvider                     1.0.0.0    NetEventPacketCapture
+Function        Set-NetFirewallAddressFilter                       2.0.0.0    NetSecurity
+Function        Set-NetFirewallApplicationFilter                   2.0.0.0    NetSecurity
+Function        Set-NetFirewallInterfaceFilter                     2.0.0.0    NetSecurity
+Function        Set-NetFirewallInterfaceTypeFilter                 2.0.0.0    NetSecurity
+Function        Set-NetFirewallPortFilter                          2.0.0.0    NetSecurity
+Function        Set-NetFirewallProfile                             2.0.0.0    NetSecurity
+Function        Set-NetFirewallRule                                2.0.0.0    NetSecurity
+Function        Set-NetFirewallSecurityFilter                      2.0.0.0    NetSecurity
+Function        Set-NetFirewallServiceFilter                       2.0.0.0    NetSecurity
+Function        Set-NetFirewallSetting                             2.0.0.0    NetSecurity
+Function        Set-NetIPAddress                                   1.0.0.0    NetTCPIP
+Function        Set-NetIPHttpsConfiguration                        1.0.0.0    NetworkTransition
+Function        Set-NetIPInterface                                 1.0.0.0    NetTCPIP
+Function        Set-NetIPsecDospSetting                            2.0.0.0    NetSecurity
+Function        Set-NetIPsecMainModeCryptoSet                      2.0.0.0    NetSecurity
+Function        Set-NetIPsecMainModeRule                           2.0.0.0    NetSecurity
+Function        Set-NetIPsecPhase1AuthSet                          2.0.0.0    NetSecurity
+Function        Set-NetIPsecPhase2AuthSet                          2.0.0.0    NetSecurity
+Function        Set-NetIPsecQuickModeCryptoSet                     2.0.0.0    NetSecurity
+Function        Set-NetIPsecRule                                   2.0.0.0    NetSecurity
+Function        Set-NetIPv4Protocol                                1.0.0.0    NetTCPIP
+Function        Set-NetIPv6Protocol                                1.0.0.0    NetTCPIP
+Function        Set-NetIsatapConfiguration                         1.0.0.0    NetworkTransition
+Function        Set-NetLbfoTeam                                    2.0.0.0    NetLbfo
+Function        Set-NetLbfoTeamMember                              2.0.0.0    NetLbfo
+Function        Set-NetLbfoTeamNic                                 2.0.0.0    NetLbfo
+Function        Set-NetNat                                         1.0.0.0    NetNat
+Function        Set-NetNatGlobal                                   1.0.0.0    NetNat
+Function        Set-NetNatTransitionConfiguration                  1.0.0.0    NetworkTransition
+Function        Set-NetNeighbor                                    1.0.0.0    NetTCPIP
+Function        Set-NetOffloadGlobalSetting                        1.0.0.0    NetTCPIP
+Function        Set-NetQosPolicy                                   2.0.0.0    NetQos
+Function        Set-NetRoute                                       1.0.0.0    NetTCPIP
+Function        Set-NetTCPSetting                                  1.0.0.0    NetTCPIP
+Function        Set-NetTeredoConfiguration                         1.0.0.0    NetworkTransition
+Function        Set-NetUDPSetting                                  1.0.0.0    NetTCPIP
+Function        Set-NetworkSwitchEthernetPortIPAddress             1.0.0.0    NetworkSwitchManager
+Function        Set-NetworkSwitchPortMode                          1.0.0.0    NetworkSwitchManager
+Function        Set-NetworkSwitchPortProperty                      1.0.0.0    NetworkSwitchManager
+Function        Set-NetworkSwitchVlanProperty                      1.0.0.0    NetworkSwitchManager
+Function        Set-OdbcDriver                                     1.0.0.0    Wdac
+Function        Set-OdbcDsn                                        1.0.0.0    Wdac
+Function        Set-Partition                                      2.0.0.0    Storage
+Function        Set-PcsvDeviceBootConfiguration                    1.0.0.0    PcsvDevice
+Function        Set-PcsvDeviceNetworkConfiguration                 1.0.0.0    PcsvDevice
+Function        Set-PcsvDeviceUserPassword                         1.0.0.0    PcsvDevice
+Function        Set-PhysicalDisk                                   2.0.0.0    Storage
+Function        Set-PrintConfiguration                             1.1        PrintManagement
+Function        Set-Printer                                        1.1        PrintManagement
+Function        Set-PrinterProperty                                1.1        PrintManagement
+Function        Set-PSRepository                                   1.0.0.1    PowerShellGet
+Function        Set-ResiliencySetting                              2.0.0.0    Storage
+Function        Set-ScheduledTask                                  1.0.0.0    ScheduledTasks
+Function        Set-SmbBandwidthLimit                              2.0.0.0    SmbShare
+Function        Set-SmbClientConfiguration                         2.0.0.0    SmbShare
+Function        Set-SmbPathAcl                                     2.0.0.0    SmbShare
+Function        Set-SmbServerConfiguration                         2.0.0.0    SmbShare
+Function        Set-SmbShare                                       2.0.0.0    SmbShare
+Function        Set-StorageBusProfile                              1.0.0.0    StorageBusCache
+Function        Set-StorageFileServer                              2.0.0.0    Storage
+Function        Set-StorageHealthSetting                           2.0.0.0    Storage
+Function        Set-StoragePool                                    2.0.0.0    Storage
+Function        Set-StorageProvider                                2.0.0.0    Storage
+Function        Set-StorageSetting                                 2.0.0.0    Storage
+Function        Set-StorageSubSystem                               2.0.0.0    Storage
+Function        Set-StorageTier                                    2.0.0.0    Storage
+Function        Set-TestInconclusive                               3.4.0      Pester
+Function        Setup                                              3.4.0      Pester
+Function        Set-VirtualDisk                                    2.0.0.0    Storage
+Function        Set-Volume                                         2.0.0.0    Storage
+Function        Set-VolumeScrubPolicy                              2.0.0.0    Storage
+Function        Set-VpnConnection                                  2.0.0.0    VpnClient
+Function        Set-VpnConnectionIPsecConfiguration                2.0.0.0    VpnClient
+Function        Set-VpnConnectionProxy                             2.0.0.0    VpnClient
+Function        Set-VpnConnectionTriggerDnsConfiguration           2.0.0.0    VpnClient
+Function        Set-VpnConnectionTriggerTrustedNetwork             2.0.0.0    VpnClient
+Function        Should                                             3.4.0      Pester
+Function        Show-NetFirewallRule                               2.0.0.0    NetSecurity
+Function        Show-NetIPsecRule                                  2.0.0.0    NetSecurity
+Function        Show-StorageHistory                                2.0.0.0    Storage
+Function        Show-VirtualDisk                                   2.0.0.0    Storage
+Function        Start-AppBackgroundTask                            1.0.0.0    AppBackgroundTask
+Function        Start-AutologgerConfig                             1.0.0.0    EventTracingManagement
+Function        Start-Dtc                                          1.0.0.0    MsDtc
+Function        Start-DtcTransactionsTraceSession                  1.0.0.0    MsDtc
+Function        Start-EtwTraceSession                              1.0.0.0    EventTracingManagement
+Function        Start-MpScan                                       1.0        ConfigDefender
+Function        Start-MpScan                                       1.0        Defender
+Function        Start-MpWDOScan                                    1.0        ConfigDefender
+Function        Start-MpWDOScan                                    1.0        Defender
+Function        Start-NetEventSession                              1.0.0.0    NetEventPacketCapture
+Function        Start-PcsvDevice                                   1.0.0.0    PcsvDevice
+Function        Start-ScheduledTask                                1.0.0.0    ScheduledTasks
+Function        Start-StorageDiagnosticLog                         2.0.0.0    Storage
+Function        Start-Trace                                        1.0.0.0    PSDiagnostics
+Function        Start-WUScan                                       1.0.0.2    WindowsUpdateProvider
+Function        Stop-DscConfiguration                              1.1        PSDesiredStateConfiguration
+Function        Stop-Dtc                                           1.0.0.0    MsDtc
+Function        Stop-DtcTransactionsTraceSession                   1.0.0.0    MsDtc
+Function        Stop-EtwTraceSession                               1.0.0.0    EventTracingManagement
+Function        Stop-NetEventSession                               1.0.0.0    NetEventPacketCapture
+Function        Stop-PcsvDevice                                    1.0.0.0    PcsvDevice
+Function        Stop-ScheduledTask                                 1.0.0.0    ScheduledTasks
+Function        Stop-StorageDiagnosticLog                          2.0.0.0    Storage
+Function        Stop-StorageJob                                    2.0.0.0    Storage
+Function        Stop-Trace                                         1.0.0.0    PSDiagnostics
+Function        Suspend-BitLocker                                  1.0.0.0    BitLocker
+Function        Suspend-PrintJob                                   1.1        PrintManagement
+Function        Suspend-StorageBusDisk                             1.0.0.0    StorageBusCache
+Function        Sync-NetIPsecRule                                  2.0.0.0    NetSecurity
+Function        T:
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+PS C:\WINDOWS\system32> get-executionpolicy
+RemoteSigned
+PS C:\WINDOWS\system32> Get-chilitem | format-list
+Get-chilitem : The term 'Get-chilitem' is not recognized as the name of a cmdlet, function, script file, or operable 
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ Get-chilitem | format-list
++ ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (Get-chilitem:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+Get-chilitem : The term 'Get-chilitem' is not recognized as the name of a cmdlet, function, script file, or operable
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ Get-chilitem | format-list
++ ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (Get-chilitem:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\WINDOWS\system32> Get-childitem | format-list
+
+
+    Directory: C:\WINDOWS\system32
+
+
+
+Name           : 0409
+CreationTime   : 19-03-2019 11:48:19
+LastWriteTime  : 19-03-2019 11:48:19
+LastAccessTime : 19-03-2019 11:48:19
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : 1033
+CreationTime   : 23-01-2019 17:07:23
+LastWriteTime  : 01-10-2019 12:37:15
+LastAccessTime : 01-10-2019 12:37:15
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : AdvancedInstallers
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 11-06-2020 19:02:35
+LastAccessTime : 11-06-2020 19:02:35
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : af-ZA
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:57
+LastAccessTime : 01-10-2019 12:21:41
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : am-et
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 19-03-2019 10:23:09
+LastAccessTime : 19-03-2019 10:23:09
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : AppLocker
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 19-03-2019 10:22:45
+LastAccessTime : 01-10-2019 12:20:37
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : appraiser
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 22-11-2019 20:42:19
+LastAccessTime : 22-11-2019 20:42:19
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : ar-SA
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 22-11-2019 20:42:19
+LastAccessTime : 22-11-2019 20:42:19
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : as-IN
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:57
+LastAccessTime : 01-10-2019 12:21:41
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : az-Latn-AZ
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 15-09-2019 17:03:52
+LastAccessTime : 01-10-2019 12:21:41
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : be-BY
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:57
+LastAccessTime : 01-10-2019 12:21:41
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : bg-BG
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 01-10-2019 12:04:07
+LastAccessTime : 01-10-2019 12:04:07
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : bn-BD
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:58
+LastAccessTime : 01-10-2019 12:21:41
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : bn-IN
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:58
+LastAccessTime : 01-10-2019 12:21:41
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : Boot
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 16-04-2020 18:13:03
+LastAccessTime : 16-04-2020 18:13:03
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : bs-Latn-BA
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 15-09-2019 17:03:52
+LastAccessTime : 01-10-2019 12:21:41
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : Bthprops
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 19-03-2019 10:23:09
+LastAccessTime : 19-03-2019 10:23:09
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : ca-ES
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 12-04-2018 14:49:12
+LastAccessTime : 01-10-2019 12:21:41
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : ca-ES-valencia
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 15-09-2019 17:03:52
+LastAccessTime : 01-10-2019 12:21:41
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : CatRoot
+CreationTime   : 19-03-2019 10:07:22
+LastWriteTime  : 21-07-2020 07:57:34
+LastAccessTime : 21-07-2020 07:57:34
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : catroot2
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 27-07-2020 11:51:41
+LastAccessTime : 27-07-2020 11:51:41
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : chr-CHER-US
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 15-09-2019 17:03:52
+LastAccessTime : 01-10-2019 12:23:24
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : CodeIntegrity
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 19-03-2019 10:22:45
+LastAccessTime : 01-10-2019 12:20:37
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : Com
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 11-06-2020 19:02:35
+LastAccessTime : 11-06-2020 19:02:35
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : config
+CreationTime   : 19-03-2019 10:07:22
+LastWriteTime  : 24-07-2020 18:46:21
+LastAccessTime : 24-07-2020 18:46:21
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : Configuration
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 19-03-2019 10:22:45
+LastAccessTime : 01-10-2019 12:23:24
+Mode           : d---s-
+LinkType       :
+Target         : {}
+
+Name           : cs-CZ
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 01-10-2019 12:04:07
+LastAccessTime : 01-10-2019 12:04:07
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : cy-GB
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:58
+LastAccessTime : 01-10-2019 12:23:24
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : da-DK
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 01-10-2019 12:04:07
+LastAccessTime : 01-10-2019 12:04:07
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : DDFs
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 19-03-2019 10:23:09
+LastAccessTime : 19-03-2019 10:23:09
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : de-DE
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 16-04-2020 18:13:03
+LastAccessTime : 16-04-2020 18:13:03
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : DiagSvcs
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 17-07-2020 20:21:39
+LastAccessTime : 17-07-2020 20:21:39
+Mode           : d---s-
+LinkType       :
+Target         : {}
+
+Name           : Dism
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 11-06-2020 19:02:35
+LastAccessTime : 11-06-2020 19:02:35
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : downlevel
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 19-03-2019 10:23:09
+LastAccessTime : 01-10-2019 11:55:13
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : drivers
+CreationTime   : 19-03-2019 10:21:55
+LastWriteTime  : 21-07-2020 07:57:34
+LastAccessTime : 21-07-2020 07:57:34
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : DriverState
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 19-03-2019 10:22:45
+LastAccessTime : 01-10-2019 12:23:25
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : DriverStore
+CreationTime   : 19-03-2019 10:07:22
+LastWriteTime  : 21-07-2020 07:57:32
+LastAccessTime : 21-07-2020 07:57:32
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : DRVSTORE
+CreationTime   : 03-09-2017 22:57:42
+LastWriteTime  : 21-07-2020 07:57:33
+LastAccessTime : 21-07-2020 07:57:34
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : dsc
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 19-03-2019 11:48:19
+LastAccessTime : 01-10-2019 12:19:11
+Mode           : d---s-
+LinkType       :
+Target         : {}
+
+Name           : el-GR
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 22-11-2019 20:42:19
+LastAccessTime : 22-11-2019 20:42:19
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : en
+CreationTime   : 19-03-2019 11:48:19
+LastWriteTime  : 19-03-2019 11:48:19
+LastAccessTime : 19-03-2019 11:48:19
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : en-GB
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 22-11-2019 20:42:19
+LastAccessTime : 22-11-2019 20:42:19
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : en-US
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 17-07-2020 20:21:39
+LastAccessTime : 17-07-2020 20:21:39
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : es-ES
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 01-10-2019 12:04:07
+LastAccessTime : 01-10-2019 12:04:07
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : es-MX
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 01-10-2019 12:04:07
+LastAccessTime : 01-10-2019 12:04:07
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : et-EE
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 01-10-2019 12:04:07
+LastAccessTime : 01-10-2019 12:04:07
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : eu-ES
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 12-04-2018 14:49:12
+LastAccessTime : 01-10-2019 12:23:28
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : F12
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 11-06-2020 19:02:35
+LastAccessTime : 11-06-2020 19:02:35
+Mode           : d---s-
+LinkType       :
+Target         : {}
+
+Name           : fa-IR
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:58
+LastAccessTime : 01-10-2019 12:23:28
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : ff-Adlm-SN
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 19-03-2019 10:23:09
+LastAccessTime : 19-03-2019 10:23:09
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : fi-FI
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 01-10-2019 12:04:07
+LastAccessTime : 01-10-2019 12:04:07
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : fil-PH
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:58
+LastAccessTime : 01-10-2019 12:23:28
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : fr-CA
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 16-02-2020 01:09:57
+LastAccessTime : 16-02-2020 01:09:57
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : fr-FR
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 16-02-2020 01:09:57
+LastAccessTime : 16-02-2020 01:09:57
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : FxsTmp
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 19-03-2019 10:22:45
+LastAccessTime : 19-03-2019 10:22:45
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : ga-IE
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:58
+LastAccessTime : 01-10-2019 12:23:28
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : gd-GB
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:58
+LastAccessTime : 01-10-2019 12:23:28
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : gl-ES
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 12-04-2018 14:49:12
+LastAccessTime : 01-10-2019 12:23:28
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : GroupPolicyUsers
+CreationTime   : 16-07-2016 17:17:48
+LastWriteTime  : 16-07-2016 17:17:48
+LastAccessTime : 01-10-2019 12:20:53
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : gu-IN
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:58
+LastAccessTime : 01-10-2019 12:23:28
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : ha-Latn-NG
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 15-09-2019 17:03:52
+LastAccessTime : 01-10-2019 12:23:28
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : he-IL
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 01-10-2019 12:04:07
+LastAccessTime : 01-10-2019 12:04:07
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : hi-IN
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 12-04-2018 14:49:12
+LastAccessTime : 01-10-2019 12:23:28
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : hr-HR
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 01-10-2019 12:04:07
+LastAccessTime : 01-10-2019 12:04:07
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : hu-HU
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 01-10-2019 12:04:07
+LastAccessTime : 01-10-2019 12:04:07
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : hy-AM
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:58
+LastAccessTime : 01-10-2019 12:23:28
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : Hydrogen
+CreationTime   : 19-03-2019 11:50:36
+LastWriteTime  : 19-03-2019 11:50:36
+LastAccessTime : 01-10-2019 12:23:28
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : ias
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 19-03-2019 10:23:09
+LastAccessTime : 19-03-2019 10:23:09
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : icsxml
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 19-03-2019 10:23:10
+LastAccessTime : 19-03-2019 10:23:10
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : id-ID
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:58
+LastAccessTime : 01-10-2019 12:23:28
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : ig-NG
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 15-09-2019 17:03:52
+LastAccessTime : 01-10-2019 12:23:28
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : IME
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 19-03-2019 10:22:45
+LastAccessTime : 01-10-2019 12:23:28
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : inetsrv
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 16-05-2020 23:01:14
+LastAccessTime : 16-05-2020 23:01:14
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : InputMethod
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 19-03-2019 10:22:45
+LastAccessTime : 01-10-2019 12:23:28
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : Intel
+CreationTime   : 05-09-2017 20:28:36
+LastWriteTime  : 01-10-2019 12:23:28
+LastAccessTime : 01-10-2019 12:23:28
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : Ipmi
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 19-03-2019 10:22:45
+LastAccessTime : 19-03-2019 10:22:45
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : is-IS
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:58
+LastAccessTime : 01-10-2019 12:23:28
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : it-IT
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 01-10-2019 12:04:07
+LastAccessTime : 01-10-2019 12:04:07
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : ja-jp
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 16-02-2020 01:09:57
+LastAccessTime : 16-02-2020 01:09:57
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : ka-GE
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:58
+LastAccessTime : 01-10-2019 12:23:29
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : Keywords
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 19-03-2019 10:23:10
+LastAccessTime : 19-03-2019 10:23:10
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : kk-KZ
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:58
+LastAccessTime : 01-10-2019 12:23:29
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : km-KH
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:58
+LastAccessTime : 01-10-2019 12:23:29
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : kn-IN
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:58
+LastAccessTime : 01-10-2019 12:23:29
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : ko-KR
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 01-10-2019 12:04:07
+LastAccessTime : 01-10-2019 12:04:07
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : kok-IN
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:58
+LastAccessTime : 01-10-2019 12:23:29
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : ku-Arab-IQ
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 15-09-2019 17:03:52
+LastAccessTime : 01-10-2019 12:23:29
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : ky-KG
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:58
+LastAccessTime : 01-10-2019 12:23:29
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : lb-LU
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:58
+LastAccessTime : 01-10-2019 12:23:29
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : Licenses
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 19-03-2019 10:22:45
+LastAccessTime : 01-10-2019 12:23:29
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : lo-LA
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:58
+LastAccessTime : 01-10-2019 12:23:29
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : LogFiles
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 21-07-2020 18:00:01
+LastAccessTime : 21-07-2020 18:00:01
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : lt-LT
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 01-10-2019 12:04:07
+LastAccessTime : 01-10-2019 12:04:07
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : lv-LV
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 01-10-2019 12:04:07
+LastAccessTime : 01-10-2019 12:04:07
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : Macromed
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 19-03-2019 10:22:45
+LastAccessTime : 01-10-2019 12:23:29
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : MailContactsCalendarSync
+CreationTime   : 19-03-2019 11:50:02
+LastWriteTime  : 19-03-2019 11:50:02
+LastAccessTime : 19-03-2019 11:50:02
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : mi-NZ
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:58
+LastAccessTime : 01-10-2019 12:23:29
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : Microsoft
+CreationTime   : 01-10-2019 12:19:15
+LastWriteTime  : 01-10-2019 12:19:15
+LastAccessTime : 01-10-2019 12:19:15
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : migration
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 16-05-2020 23:01:14
+LastAccessTime : 16-05-2020 23:01:14
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : migwiz
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 16-04-2020 18:13:03
+LastAccessTime : 16-04-2020 18:13:03
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : mk-MK
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:58
+LastAccessTime : 01-10-2019 12:23:29
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : ml-IN
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:58
+LastAccessTime : 01-10-2019 12:23:29
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : mn-MN
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:58
+LastAccessTime : 01-10-2019 12:23:29
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : mr-IN
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:58
+LastAccessTime : 01-10-2019 12:23:29
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : MRT
+CreationTime   : 16-08-2017 10:49:56
+LastWriteTime  : 16-05-2020 22:54:50
+LastAccessTime : 16-05-2020 22:54:50
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : ms-MY
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:58
+LastAccessTime : 01-10-2019 12:23:29
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : MSDRM
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 19-03-2019 10:23:11
+LastAccessTime : 19-03-2019 10:23:11
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : MsDtc
+CreationTime   : 12-04-2018 05:08:21
+LastWriteTime  : 01-10-2019 12:37:12
+LastAccessTime : 01-10-2019 12:37:12
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : mt-MT
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:58
+LastAccessTime : 01-10-2019 12:23:29
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : MUI
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 19-03-2019 11:48:20
+LastAccessTime : 01-10-2019 12:19:11
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : my-mm
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 19-03-2019 10:23:11
+LastAccessTime : 19-03-2019 10:23:11
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : nb-NO
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 01-10-2019 12:04:07
+LastAccessTime : 01-10-2019 12:04:07
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : NDF
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 01-10-2019 12:37:15
+LastAccessTime : 01-10-2019 12:37:15
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : ne-NP
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:58
+LastAccessTime : 01-10-2019 12:23:29
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : networklist
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 19-03-2019 10:22:45
+LastAccessTime : 01-10-2019 12:20:37
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : nl-NL
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 22-11-2019 20:42:19
+LastAccessTime : 22-11-2019 20:42:19
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : nn-NO
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:58
+LastAccessTime : 01-10-2019 12:23:29
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : nso-ZA
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 15-09-2019 17:03:52
+LastAccessTime : 01-10-2019 12:23:29
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : Nui
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 19-03-2019 10:23:11
+LastAccessTime : 19-03-2019 10:23:11
+Mode           : d---s-
+LinkType       :
+Target         : {}
+
+Name           : oobe
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 17-07-2020 20:21:39
+LastAccessTime : 17-07-2020 20:21:39
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : OpenSSH
+CreationTime   : 19-03-2019 11:49:15
+LastWriteTime  : 19-03-2019 11:49:15
+LastAccessTime : 19-03-2019 11:49:15
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : or-IN
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:58
+LastAccessTime : 01-10-2019 12:23:30
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : osa-Osge-001
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 19-03-2019 10:23:11
+LastAccessTime : 19-03-2019 10:23:11
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : pa-Arab-PK
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 15-09-2019 17:03:52
+LastAccessTime : 01-10-2019 12:23:30
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : pa-IN
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:58
+LastAccessTime : 01-10-2019 12:23:30
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : PerceptionSimulation
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 16-04-2020 18:13:03
+LastAccessTime : 16-04-2020 18:13:03
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : pl-PL
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 12-12-2019 11:08:20
+LastAccessTime : 12-12-2019 11:08:20
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : PointOfService
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 19-03-2019 10:22:45
+LastAccessTime : 19-03-2019 10:22:45
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : Printing_Admin_Scripts
+CreationTime   : 19-03-2019 11:48:20
+LastWriteTime  : 19-03-2019 11:48:20
+LastAccessTime : 01-10-2019 12:19:11
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : ProximityToast
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 19-03-2019 10:22:45
+LastAccessTime : 19-03-2019 10:22:45
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : prs-AF
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:58
+LastAccessTime : 01-10-2019 12:23:30
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : pt-BR
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 01-10-2019 12:04:07
+LastAccessTime : 01-10-2019 12:04:07
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : pt-PT
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 22-11-2019 20:42:19
+LastAccessTime : 22-11-2019 20:42:19
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : quc-Latn-GT
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 15-09-2019 17:03:52
+LastAccessTime : 01-10-2019 12:23:30
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : quz-PE
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 14-06-2018 08:43:58
+LastAccessTime : 01-10-2019 12:23:30
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : ras
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 19-03-2019 10:22:45
+LastAccessTime : 19-03-2019 10:22:45
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : RasToast
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 19-03-2019 10:22:45
+LastAccessTime : 19-03-2019 10:22:45
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : Recovery
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 30-09-2019 23:10:26
+LastAccessTime : 30-09-2019 23:10:26
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : restore
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 02-10-2019 06:16:58
+LastAccessTime : 02-10-2019 06:16:58
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : ro-RO
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 22-11-2019 20:42:19
+LastAccessTime : 22-11-2019 20:42:19
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : ru-RU
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 22-11-2019 20:42:19
+LastAccessTime : 22-11-2019 20:42:19
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : rw-RW
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 15-09-2019 17:03:52
+LastAccessTime : 01-10-2019 12:23:30
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : sd-Arab-PK
+CreationTime   : 12-04-2018 14:49:12
+LastWriteTime  : 15-09-2019 17:03:52
+LastAccessTime : 01-10-2019 12:23:30
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : SecureBootUpdates
+CreationTime   : 19-03-2019 10:22:45
+LastWriteTime  : 16-02-2020 07:11:23
+LastAccessTime : 16-02-2020 07:11:23
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+PS C:\WINDOWS\system32> get-alias
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Alias           % -> ForEach-Object
+Alias           ? -> Where-Object
+Alias           ac -> Add-Content
+Alias           asnp -> Add-PSSnapin
+Alias           cat -> Get-Content
+Alias           cd -> Set-Location
+Alias           CFS -> ConvertFrom-String                          3.1.0.0    Microsoft.PowerShell.Utility
+Alias           chdir -> Set-Location
+Alias           clc -> Clear-Content
+Alias           clear -> Clear-Host
+Alias           clhy -> Clear-History
+Alias           cli -> Clear-Item
+Alias           clp -> Clear-ItemProperty
+Alias           cls -> Clear-Host
+Alias           clv -> Clear-Variable
+Alias           cnsn -> Connect-PSSession
+Alias           compare -> Compare-Object
+Alias           copy -> Copy-Item
+Alias           cp -> Copy-Item
+Alias           cpi -> Copy-Item
+Alias           cpp -> Copy-ItemProperty
+Alias           curl -> Invoke-WebRequest
+Alias           cvpa -> Convert-Path
+Alias           dbp -> Disable-PSBreakpoint
+Alias           del -> Remove-Item
+Alias           diff -> Compare-Object
+Alias           dir -> Get-ChildItem
+Alias           dnsn -> Disconnect-PSSession
+Alias           ebp -> Enable-PSBreakpoint
+Alias           echo -> Write-Output
+Alias           epal -> Export-Alias
+Alias           epcsv -> Export-Csv
+Alias           epsn -> Export-PSSession
+Alias           erase -> Remove-Item
+Alias           etsn -> Enter-PSSession
+Alias           exsn -> Exit-PSSession
+Alias           fc -> Format-Custom
+Alias           fhx -> Format-Hex                                  3.1.0.0    Microsoft.PowerShell.Utility
+Alias           fl -> Format-List
+Alias           foreach -> ForEach-Object
+Alias           ft -> Format-Table
+Alias           fw -> Format-Wide
+Alias           gal -> Get-Alias
+Alias           gbp -> Get-PSBreakpoint
+Alias           gc -> Get-Content
+Alias           gcb -> Get-Clipboard                               3.1.0.0    Microsoft.PowerShell.Management
+Alias           gci -> Get-ChildItem
+Alias           gcm -> Get-Command
+Alias           gcs -> Get-PSCallStack
+Alias           gdr -> Get-PSDrive
+Alias           ghy -> Get-History
+Alias           gi -> Get-Item
+Alias           gin -> Get-ComputerInfo                            3.1.0.0    Microsoft.PowerShell.Management
+Alias           gjb -> Get-Job
+Alias           gl -> Get-Location
+Alias           gm -> Get-Member
+Alias           gmo -> Get-Module
+Alias           gp -> Get-ItemProperty
+Alias           gps -> Get-Process
+Alias           gpv -> Get-ItemPropertyValue
+Alias           group -> Group-Object
+Alias           gsn -> Get-PSSession
+Alias           gsnp -> Get-PSSnapin
+Alias           gsv -> Get-Service
+Alias           gtz -> Get-TimeZone                                3.1.0.0    Microsoft.PowerShell.Management
+Alias           gu -> Get-Unique
+Alias           gv -> Get-Variable
+Alias           gwmi -> Get-WmiObject
+Alias           h -> Get-History
+Alias           history -> Get-History
+Alias           icm -> Invoke-Command
+Alias           iex -> Invoke-Expression
+Alias           ihy -> Invoke-History
+Alias           ii -> Invoke-Item
+Alias           ipal -> Import-Alias
+Alias           ipcsv -> Import-Csv
+Alias           ipmo -> Import-Module
+Alias           ipsn -> Import-PSSession
+Alias           irm -> Invoke-RestMethod
+Alias           ise -> powershell_ise.exe
+Alias           iwmi -> Invoke-WmiMethod
+Alias           iwr -> Invoke-WebRequest
+Alias           kill -> Stop-Process
+Alias           lp -> Out-Printer
+Alias           ls -> Get-ChildItem
+Alias           man -> help
+Alias           md -> mkdir
+Alias           measure -> Measure-Object
+Alias           mi -> Move-Item
+Alias           mount -> New-PSDrive
+Alias           move -> Move-Item
+Alias           mp -> Move-ItemProperty
+Alias           mv -> Move-Item
+Alias           nal -> New-Alias
+Alias           ndr -> New-PSDrive
+Alias           ni -> New-Item
+Alias           nmo -> New-Module
+Alias           npssc -> New-PSSessionConfigurationFile
+Alias           nsn -> New-PSSession
+Alias           nv -> New-Variable
+Alias           ogv -> Out-GridView
+Alias           oh -> Out-Host
+Alias           popd -> Pop-Location
+Alias           ps -> Get-Process
+Alias           pushd -> Push-Location
+Alias           pwd -> Get-Location
+Alias           r -> Invoke-History
+Alias           rbp -> Remove-PSBreakpoint
+Alias           rcjb -> Receive-Job
+Alias           rcsn -> Receive-PSSession
+Alias           rd -> Remove-Item
+Alias           rdr -> Remove-PSDrive
+Alias           ren -> Rename-Item
+Alias           ri -> Remove-Item
+Alias           rjb -> Remove-Job
+Alias           rm -> Remove-Item
+Alias           rmdir -> Remove-Item
+Alias           rmo -> Remove-Module
+Alias           rni -> Rename-Item
+Alias           rnp -> Rename-ItemProperty
+Alias           rp -> Remove-ItemProperty
+Alias           rsn -> Remove-PSSession
+Alias           rsnp -> Remove-PSSnapin
+Alias           rujb -> Resume-Job
+Alias           rv -> Remove-Variable
+Alias           rvpa -> Resolve-Path
+Alias           rwmi -> Remove-WmiObject
+Alias           sajb -> Start-Job
+Alias           sal -> Set-Alias
+Alias           saps -> Start-Process
+Alias           sasv -> Start-Service
+Alias           sbp -> Set-PSBreakpoint
+Alias           sc -> Set-Content
+Alias           scb -> Set-Clipboard                               3.1.0.0    Microsoft.PowerShell.Management
+Alias           select -> Select-Object
+Alias           set -> Set-Variable
+Alias           shcm -> Show-Command
+Alias           si -> Set-Item
+Alias           sl -> Set-Location
+Alias           sleep -> Start-Sleep
+Alias           sls -> Select-String
+Alias           sort -> Sort-Object
+Alias           sp -> Set-ItemProperty
+Alias           spjb -> Stop-Job
+Alias           spps -> Stop-Process
+Alias           spsv -> Stop-Service
+Alias           start -> Start-Process
+Alias           stz -> Set-TimeZone                                3.1.0.0    Microsoft.PowerShell.Management
+Alias           sujb -> Suspend-Job
+Alias           sv -> Set-Variable
+Alias           swmi -> Set-WmiInstance
+Alias           tee -> Tee-Object
+Alias           trcm -> Trace-Command
+Alias           type -> Get-Content
+Alias           wget -> Invoke-WebRequest
+Alias           where -> Where-Object
+Alias           wjb -> Wait-Job
+Alias           write -> Write-Output
+
+
+PS C:\WINDOWS\system32> gal
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Alias           % -> ForEach-Object
+Alias           ? -> Where-Object
+Alias           ac -> Add-Content
+Alias           asnp -> Add-PSSnapin
+Alias           cat -> Get-Content
+Alias           cd -> Set-Location
+Alias           CFS -> ConvertFrom-String                          3.1.0.0    Microsoft.PowerShell.Utility
+Alias           chdir -> Set-Location
+Alias           clc -> Clear-Content
+Alias           clear -> Clear-Host
+Alias           clhy -> Clear-History
+Alias           cli -> Clear-Item
+Alias           clp -> Clear-ItemProperty
+Alias           cls -> Clear-Host
+Alias           clv -> Clear-Variable
+Alias           cnsn -> Connect-PSSession
+Alias           compare -> Compare-Object
+Alias           copy -> Copy-Item
+Alias           cp -> Copy-Item
+Alias           cpi -> Copy-Item
+Alias           cpp -> Copy-ItemProperty
+Alias           curl -> Invoke-WebRequest
+Alias           cvpa -> Convert-Path
+Alias           dbp -> Disable-PSBreakpoint
+Alias           del -> Remove-Item
+Alias           diff -> Compare-Object
+Alias           dir -> Get-ChildItem
+Alias           dnsn -> Disconnect-PSSession
+Alias           ebp -> Enable-PSBreakpoint
+Alias           echo -> Write-Output
+Alias           epal -> Export-Alias
+Alias           epcsv -> Export-Csv
+Alias           epsn -> Export-PSSession
+Alias           erase -> Remove-Item
+Alias           etsn -> Enter-PSSession
+Alias           exsn -> Exit-PSSession
+Alias           fc -> Format-Custom
+Alias           fhx -> Format-Hex                                  3.1.0.0    Microsoft.PowerShell.Utility
+Alias           fl -> Format-List
+Alias           foreach -> ForEach-Object
+Alias           ft -> Format-Table
+Alias           fw -> Format-Wide
+Alias           gal -> Get-Alias
+Alias           gbp -> Get-PSBreakpoint
+Alias           gc -> Get-Content
+Alias           gcb -> Get-Clipboard                               3.1.0.0    Microsoft.PowerShell.Management
+Alias           gci -> Get-ChildItem
+Alias           gcm -> Get-Command
+Alias           gcs -> Get-PSCallStack
+Alias           gdr -> Get-PSDrive
+Alias           ghy -> Get-History
+Alias           gi -> Get-Item
+Alias           gin -> Get-ComputerInfo                            3.1.0.0    Microsoft.PowerShell.Management
+Alias           gjb -> Get-Job
+Alias           gl -> Get-Location
+Alias           gm -> Get-Member
+Alias           gmo -> Get-Module
+Alias           gp -> Get-ItemProperty
+Alias           gps -> Get-Process
+Alias           gpv -> Get-ItemPropertyValue
+Alias           group -> Group-Object
+Alias           gsn -> Get-PSSession
+Alias           gsnp -> Get-PSSnapin
+Alias           gsv -> Get-Service
+Alias           gtz -> Get-TimeZone                                3.1.0.0    Microsoft.PowerShell.Management
+Alias           gu -> Get-Unique
+Alias           gv -> Get-Variable
+Alias           gwmi -> Get-WmiObject
+Alias           h -> Get-History
+Alias           history -> Get-History
+Alias           icm -> Invoke-Command
+Alias           iex -> Invoke-Expression
+Alias           ihy -> Invoke-History
+Alias           ii -> Invoke-Item
+Alias           ipal -> Import-Alias
+Alias           ipcsv -> Import-Csv
+Alias           ipmo -> Import-Module
+Alias           ipsn -> Import-PSSession
+Alias           irm -> Invoke-RestMethod
+Alias           ise -> powershell_ise.exe
+Alias           iwmi -> Invoke-WmiMethod
+Alias           iwr -> Invoke-WebRequest
+Alias           kill -> Stop-Process
+Alias           lp -> Out-Printer
+Alias           ls -> Get-ChildItem
+Alias           man -> help
+Alias           md -> mkdir
+Alias           measure -> Measure-Object
+Alias           mi -> Move-Item
+Alias           mount -> New-PSDrive
+Alias           move -> Move-Item
+Alias           mp -> Move-ItemProperty
+Alias           mv -> Move-Item
+Alias           nal -> New-Alias
+Alias           ndr -> New-PSDrive
+Alias           ni -> New-Item
+Alias           nmo -> New-Module
+Alias           npssc -> New-PSSessionConfigurationFile
+Alias           nsn -> New-PSSession
+Alias           nv -> New-Variable
+Alias           ogv -> Out-GridView
+Alias           oh -> Out-Host
+Alias           popd -> Pop-Location
+Alias           ps -> Get-Process
+Alias           pushd -> Push-Location
+Alias           pwd -> Get-Location
+Alias           r -> Invoke-History
+Alias           rbp -> Remove-PSBreakpoint
+Alias           rcjb -> Receive-Job
+Alias           rcsn -> Receive-PSSession
+Alias           rd -> Remove-Item
+Alias           rdr -> Remove-PSDrive
+Alias           ren -> Rename-Item
+Alias           ri -> Remove-Item
+Alias           rjb -> Remove-Job
+Alias           rm -> Remove-Item
+Alias           rmdir -> Remove-Item
+Alias           rmo -> Remove-Module
+Alias           rni -> Rename-Item
+Alias           rnp -> Rename-ItemProperty
+Alias           rp -> Remove-ItemProperty
+Alias           rsn -> Remove-PSSession
+Alias           rsnp -> Remove-PSSnapin
+Alias           rujb -> Resume-Job
+Alias           rv -> Remove-Variable
+Alias           rvpa -> Resolve-Path
+Alias           rwmi -> Remove-WmiObject
+Alias           sajb -> Start-Job
+Alias           sal -> Set-Alias
+Alias           saps -> Start-Process
+Alias           sasv -> Start-Service
+Alias           sbp -> Set-PSBreakpoint
+Alias           sc -> Set-Content
+Alias           scb -> Set-Clipboard                               3.1.0.0    Microsoft.PowerShell.Management
+Alias           select -> Select-Object
+Alias           set -> Set-Variable
+Alias           shcm -> Show-Command
+Alias           si -> Set-Item
+Alias           sl -> Set-Location
+Alias           sleep -> Start-Sleep
+Alias           sls -> Select-String
+Alias           sort -> Sort-Object
+Alias           sp -> Set-ItemProperty
+Alias           spjb -> Stop-Job
+Alias           spps -> Stop-Process
+Alias           spsv -> Stop-Service
+Alias           start -> Start-Process
+Alias           stz -> Set-TimeZone                                3.1.0.0    Microsoft.PowerShell.Management
+Alias           sujb -> Suspend-Job
+Alias           sv -> Set-Variable
+Alias           swmi -> Set-WmiInstance
+Alias           tee -> Tee-Object
+Alias           trcm -> Trace-Command
+Alias           type -> Get-Content
+Alias           wget -> Invoke-WebRequest
+Alias           where -> Where-Object
+Alias           wjb -> Wait-Job
+Alias           write -> Write-Output
+
+
+PS C:\WINDOWS\system32> stop-transcript
+**********************
+Windows PowerShell transcript end
+End time: 20200728180714
+**********************
