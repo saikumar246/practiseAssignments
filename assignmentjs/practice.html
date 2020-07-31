@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            welcome to javascript
+        </title>
+    </head>
+    
+    <body>
+        <h1>javascript programing</h1>
+        <p id="demo"> </p>
+    <p id="demo1"></p>
+        <script>
+            document.getElementById("demo").innerHTML=2+2;//This is innerhtml
+            document.write(10+20);//printing sum of 10+20
+
+            //window.alert(20+4);
+
+            console.log(20+20);
+            console.log("Hello Folks");
+            var x,y,z;
+            x=5;
+            y=6;
+            z=x+y;
+            document.getElementById("demo").innerHTML="The value of z is:"+z;
+            console.log("The value of z is:"+z);
+            console.log(x+y);
+         //literals in js
+         //Integer and string
+         var a=10;
+         document.write(x); 
+         console.log(x);  
+        </script>
+        <script>
+            var firstname,lastname;
+            firstname="Java";
+            lastname="Script";
+            
+            document.getElementById("demo1").innerHTML=(firstname + lastname); 
+        </script>
+        <p id="demo2"></p>
+       <script>
+//variables
+
+var price1 = 5;
+var price2 = 6;
+var name1="tv";
+var name2="phone"
+var total = price1 + price2;
+document.getElementById("demo2").innerHTML =name1+":"+price1+"<br>"+name2+":"+price2+"<br>"+"The total price is: " + total;
+
+       </script>
+       <p id="demo3"></p></p>
+<script>
+    //variables and operators
+  var a=10;
+  var b=20;
+  var x=a+b;var y=a-b;var z=a/b;var w=a*b;
+  document.getElementById("demo3").innerHTML=x+"<br>"+y+"<br>"+z+"<br>"+w;
+</script>
+<p id="demo4"></p>p></p>
+  <script>
+//datatypes
+var name="sai";
+var age=21;
+var mail;
+var option=true;
+document.getElementById("demo4").innerHTML=name+" "+age+" "+option+"<br>"+typeof(name)+
+" "+typeof(age)+" "+typeof(mail)+" "+typeof(option);
+  </script>  
+<p id="demo5"></p>
+<p id="demo6"></p>
+<script>
+    //arrays
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo5").innerHTML = fruits.length;
+document.getElementById("demo6").innerHTML = fruits;
+</script>
+<p id="demo7"></p>
+<p id="demo8"></p>
+<script>
+    //functions
+var x = myFunction(4, 3);
+document.getElementById("demo7").innerHTML = x;
+
+function myFunction(a, b) {
+  return a * b;
+}
+function print(){
+    document.getElementById("demo8").innerHTML="Hi,This is sai";
+}
+print();
+</script>
+<p id="demo9"></p>
+<script>
+// Create an object:
+var person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue"
+};
+
+// Display some data from the object:
+document.getElementById("demo9").innerHTML =
+person.firstName + " is " + person.age + " years old.";
+</script>
+<p id="demo10"></p>
+<script>
+function myFunction() {
+  var age, voteable;
+  age = 21;
+  if (isNaN(age)) {
+    voteable = "Input is not a number";
+  } else {
+    voteable = (age < 18) ? "Too young" : "Old enough";
+  }
+  document.getElementById("demo10").innerHTML = voteable;
+}
+myFunction();
+</script>
+<p id="demo11"></p>
+<script>
+var text = "";
+var i = 0;
+while (i < 10) {
+  text += "<br>The number is " + i;
+  i++;
+}
+document.getElementById("demo11").innerHTML = text;
+</script>
+<p id="demo12"></p>
+
+<script>
+var text = "";
+var i;
+for (i = 0; i < 5; i++) {
+  text += "The number is " + i + "<br>";
+}
+document.getElementById("demo12").innerHTML = text;
+</script>
+    </body>
+</html>
