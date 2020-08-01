@@ -1,0 +1,23 @@
+NPM:-
+NPM is a node package manager
+
+NPM is a package manager for Node.js packages, or modules if you like.
+www.npmjs.com hosts thousands of free packages to download and use.
+The NPM program is installed on your computer when you install Node.js
+
+List of all the packages in NPM:
+
+React,Prop-types,Moment,Express,Request,Lodash,Async,chalk,Commander,Debug,react-dom,tslib,axios,fs-extra,
+vue,bluebird,uuid,classnames,core-js,inquirer,underscore,yargs,webpack,rxjs,mkdirp,glob,body-parser,typescript,dotenz,
+colors,jquery,minimist,
+@types/node,
+@babel/runtime,
+aws-sdk,
+babel-runtime,semver,babel-loader,node-fetch,redux,eslint,winston,css-loader,rimraf,babel-core,yeoman-generator,
+js-yaml,ora,
+@angular/core
+styled-components,babel-eslint,jsonwebton.
+
+The above all are NPM packages.
+
+
